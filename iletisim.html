@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js"
+  data-title-tr="İletişim | MAYEKO"
+  data-title-en="Contact | BGEDA"
+  data-desc-tr="Proje ortaklığı, akademik iş birliği ve üyelik için MAYEKO ile iletişime geçin."
+  data-desc-en="Contact BGEDA about project partnerships, academic collaboration and membership.">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim | MAYEKO</title>
+  <meta name="description" content="Proje ortaklığı, akademik iş birliği ve üyelik için MAYEKO ile iletişime geçin." />
+  <link rel="canonical" href="https://mayeko.org/iletisim.html" />
+  <meta property="og:title" content="İletişim | MAYEKO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mayeko.org/iletisim.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tw-config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="iletisim">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero">
+      <svg class="waves" viewBox="0 0 600 160" fill="none" aria-hidden="true">
+        <path d="M0 80c50-40 100-40 150 0s100 40 150 0 100-40 150 0 100 40 150 0" stroke="#00A896" stroke-opacity=".35" stroke-width="2"/>
+        <path d="M0 115c50-40 100-40 150 0s100 40 150 0 100-40 150 0 100 40 150 0" stroke="#0B3954" stroke-opacity=".15" stroke-width="2"/>
+      </svg>
+      <div class="container-x relative">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a><span>/</span><span data-tr="İletişim" data-en="Contact">İletişim</span>
+        </nav>
+        <h1 class="display max-w-3xl mb-6" data-tr="Bize ulaşın" data-en="Get in touch">Bize ulaşın</h1>
+        <p class="lead max-w-2xl"
+           data-tr="Proje ortaklığı, akademik iş birliği, bilgi paylaşımı veya üyelik — mesajınız doğrudan yönetim kurulumuza ulaşır."
+           data-en="Project partnerships, academic collaboration, knowledge sharing or membership — your message goes straight to our board.">
+          Proje ortaklığı, akademik iş birliği, bilgi paylaşımı veya üyelik — mesajınız doğrudan yönetim kurulumuza ulaşır.
+        </p>
+      </div>
+    </header>
+
+    <section class="section !pt-8">
+      <div class="container-x grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- İletişim bilgileri -->
+        <aside class="lg:col-span-4 space-y-8 reveal">
+          <div class="flex gap-4">
+            <div class="icon-badge"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/></svg></div>
+            <div>
+              <p class="stat-label" data-tr="E-posta" data-en="Email">E-posta</p>
+              <a href="mailto:info@mayeko.org" class="stat-value hover:text-emeraldEco">info@mayeko.org</a>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="icon-badge"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+            <div>
+              <p class="stat-label" data-tr="Merkez" data-en="Headquarters">Merkez</p>
+              <p class="stat-value" data-tr="Ortahisar / Trabzon, Türkiye" data-en="Ortahisar / Trabzon, Türkiye">Ortahisar / Trabzon, Türkiye</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="icon-badge"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg></div>
+            <div>
+              <p class="stat-label" data-tr="Yanıt süresi" data-en="Response time">Yanıt süresi</p>
+              <p class="stat-value" data-tr="Genellikle birkaç iş günü" data-en="Usually within a few working days">Genellikle birkaç iş günü</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Form -->
+        <form onsubmit="handleFormSubmit(event)" class="lg:col-span-8 card !p-7 sm:!p-10 space-y-5 reveal">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="field">
+              <label for="senderName" data-tr="Ad soyad / kurum *" data-en="Name / organisation *">Ad soyad / kurum *</label>
+              <input id="senderName" type="text" name="senderName" required autocomplete="name"
+                     data-placeholder-tr="Örn. Dr. Ayşe Yılmaz / KTÜ" data-placeholder-en="e.g. Dr Jane Doe / Black Sea Institute"
+                     placeholder="Örn. Dr. Ayşe Yılmaz / KTÜ" />
+            </div>
+            <div class="field">
+              <label for="senderEmail" data-tr="E-posta *" data-en="Email *">E-posta *</label>
+              <input id="senderEmail" type="email" name="senderEmail" required autocomplete="email"
+                     data-placeholder-tr="ornek@kurum.org" data-placeholder-en="name@organisation.org" placeholder="ornek@kurum.org" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="senderTopic" data-tr="Konu *" data-en="Topic *">Konu *</label>
+            <select id="senderTopic" name="senderTopic">
+              <option value="AB / Uluslararası Proje Ortaklığı" data-tr="AB / uluslararası proje ortaklığı" data-en="EU / international project partnership">AB / uluslararası proje ortaklığı</option>
+              <option value="Akademik Araştırma İş Birliği" data-tr="Üniversite / akademik iş birliği" data-en="University / academic collaboration">Üniversite / akademik iş birliği</option>
+              <option value="Kamu / Yerel Yönetim / STK Ortaklığı" data-tr="Kamu / yerel yönetim / STK ortaklığı" data-en="Public body / municipality / NGO partnership">Kamu / yerel yönetim / STK ortaklığı</option>
+              <option value="Üyelik / Gönüllülük" data-tr="Üyelik / gönüllülük" data-en="Membership / volunteering">Üyelik / gönüllülük</option>
+              <option value="Genel Bilgi Talebi" data-tr="Genel bilgi talebi" data-en="General enquiry">Genel bilgi talebi</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="senderMessage" data-tr="Mesajınız *" data-en="Your message *">Mesajınız *</label>
+            <textarea id="senderMessage" rows="5" name="senderMessage" required
+                      data-placeholder-tr="Proje çağrınızı, ortaklık önerinizi veya sorunuzu yazın…"
+                      data-placeholder-en="Describe your project call, partnership idea or question…"
+                      placeholder="Proje çağrınızı, ortaklık önerinizi veya sorunuzu yazın…"></textarea>
+          </div>
+
+          <label class="flex items-start gap-3 text-sm text-muted cursor-pointer">
+            <input id="kvkkConsent" type="checkbox" required class="mt-1 h-4 w-4 shrink-0 accent-digitalCyan" />
+            <span>
+              <a href="gizlilik.html" target="_blank" class="font-semibold text-marine underline underline-offset-2 hover:text-emeraldEco"
+                 data-tr="KVKK Aydınlatma Metni" data-en="Privacy Notice">KVKK Aydınlatma Metni</a><span
+                 data-tr="'ni okudum; bilgilerimin başvurumu yanıtlamak amacıyla işlenmesini kabul ediyorum. *"
+                 data-en=" — I have read it and agree that my details may be processed to respond to my enquiry. *">'ni okudum; bilgilerimin başvurumu yanıtlamak amacıyla işlenmesini kabul ediyorum. *</span>
+            </span>
+          </label>
+
+          <div class="flex flex-wrap items-center gap-5 pt-2">
+            <button type="submit" class="btn btn-primary"><span data-tr="Mesajı gönder" data-en="Send message">Mesajı gönder</span><span class="arrow">→</span></button>
+            <p id="formFeedback" class="text-sm font-medium hidden" role="status"></p>
+          </div>
+          <a id="mailtoFallbackLink" href="mailto:info@mayeko.org" class="hidden text-sm font-semibold text-digitalCyan underline"
+             data-tr="E-posta uygulamanızda açmak için tıklayın →" data-en="Click to open in your email app →">E-posta uygulamanızda açmak için tıklayın →</a>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

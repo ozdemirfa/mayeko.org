@@ -24,16 +24,31 @@ Bu doküman, **Mavi ve Yeşil Ekosistem Geliştirme Derneği (Blue and Green Eco
 ```text
 mayeko.org/
 ├── WEBSITE_DEVELOPMENT_PLAN.md      # Kurumsal kimlik ve geliştirme planı
-├── index.html                       # Ana kurumsal web sitesi (TR / EN iki dilli)
+├── index.html                       # Ana Sayfa
+├── hakkimizda.html                  # Hakkımızda (misyon, amaçlar, kimlik)
+├── alanlar.html                     # Stratejik Alanlar (Mavi / Yeşil / Dijital)
+├── metodoloji.html                  # 5 adımlı proje yaşam döngüsü
+├── isbirligi.html                   # İş birliği modelleri ve fon programları
+├── kurumsal.html                    # Yönetişim + tüzük maddeleri (akordeon)
+├── iletisim.html                    # İletişim formu
+├── gizlilik.html                    # KVKK & gizlilik
 ├── css/
-│   └── style.css                    # Kurumsal CSS değişkenleri (:root), bileşen ve animasyon stilleri
+│   └── style.css                    # Tasarım sistemi (renk değişkenleri, bileşenler, animasyonlar)
 ├── js/
-│   └── main.js                      # TR/EN dil motoru, mobil menü, tüzük/KVKK modalları, ortaklık formu
+│   ├── tw-config.js                 # Paylaşılan Tailwind renk/yazı tipi yapılandırması
+│   ├── layout.js                    # Ortak header, mobil menü ve footer (NAV dizisinden üretilir)
+│   └── main.js                      # TR/EN dil motoru, form, görünür olunca belirme, eski #anchor yönlendirme
 └── assets/
     ├── docs/
-    │   ├── tuzuk-ozeti-tr.html      # Yazdırılabilir / PDF kaydedilebilir Dernek Tüzüğü Özeti (TR)
-    │   └── bylaws-summary-en.html   # Printable / PDF-ready Association Bylaws Summary (EN)
+    │   ├── tuzuk-ozeti-tr.html      # Yazdırılabilir Tüzük Özeti (TR)
+    │   └── bylaws-summary-en.html   # Printable Bylaws Summary (EN)
     └── img/
-        ├── logo.svg                 # MAYEKO / BGEDA vektörel kurumsal logo
-        └── favicon.svg              # Tarayıcı sekme ikonu
+        ├── logo.svg
+        └── favicon.svg
 ```
+
+## 3. Yeni sayfa ekleme
+
+1. Mevcut bir alt sayfayı (ör. `metodoloji.html`) kopyalayın; `<body data-page="...">`, `<html data-title-*/data-desc-*>` ve canonical'ı güncelleyin.
+2. Menüde görünecekse `js/layout.js` içindeki `NAV` dizisine `{ id, href, tr, en }` ekleyin — header, mobil menü ve footer otomatik güncellenir.
+3. Çevrilecek her metne `data-tr` / `data-en` öznitelikleri verin (alt öğe içeren elemanlara değil, metin taşıyan en içteki öğeye).
