@@ -1,5 +1,7 @@
-/* Paylaşılan Tailwind yapılandırması — tüm sayfalar bu dosyayı yükler */
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // layout.js header/footer sınıflarını şablon metinlerinde taşıdığı için taranmalı
+  content: ['./*.html', './js/**/*.js'],
   theme: {
     extend: {
       colors: {

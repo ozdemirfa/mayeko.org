@@ -32,10 +32,16 @@ mayeko.org/
 ├── kurumsal.html                    # Yönetişim + tüzük maddeleri (akordeon)
 ├── iletisim.html                    # İletişim formu
 ├── gizlilik.html                    # KVKK & gizlilik
+├── 404.html                         # Bulunamayan sayfalar
+├── sitemap.xml, robots.txt          # Arama motorları
+├── package.json                     # npm betikleri (build / watch / dev)
+├── tailwind.config.js               # Tailwind renk/yazı tipi yapılandırması
+├── src/
+│   └── tailwind.css                 # Tailwind giriş dosyası
 ├── css/
-│   └── style.css                    # Tasarım sistemi (renk değişkenleri, bileşenler, animasyonlar)
+│   ├── style.css                    # Tasarım sistemi (renk değişkenleri, bileşenler, animasyonlar)
+│   └── tailwind.css                 # DERLENMİŞ Tailwind çıktısı (elle düzenlemeyin; repoya dahil)
 ├── js/
-│   ├── tw-config.js                 # Paylaşılan Tailwind renk/yazı tipi yapılandırması
 │   ├── layout.js                    # Ortak header, mobil menü ve footer (NAV dizisinden üretilir)
 │   └── main.js                      # TR/EN dil motoru, form, görünür olunca belirme, eski #anchor yönlendirme
 └── assets/
@@ -49,6 +55,20 @@ mayeko.org/
 
 ## 3. Yeni sayfa ekleme
 
-1. Mevcut bir alt sayfayı (ör. `metodoloji.html`) kopyalayın; `<body data-page="...">`, `<html data-title-*/data-desc-*>` ve canonical'ı güncelleyin.
+1. Mevcut bir alt sayfayı (ör. `metodoloji.html`) kopyalayın; sitemap.xml'e ekleyin; `<body data-page="...">`, `<html data-title-*/data-desc-*>` ve canonical'ı güncelleyin.
 2. Menüde görünecekse `js/layout.js` içindeki `NAV` dizisine `{ id, href, tr, en }` ekleyin — header, mobil menü ve footer otomatik güncellenir.
 3. Çevrilecek her metne `data-tr` / `data-en` öznitelikleri verin (alt öğe içeren elemanlara değil, metin taşıyan en içteki öğeye).
+
+4. HTML'de yeni Tailwind sınıfları kullandıysanız `npm run build` çalıştırıp `css/tailwind.css` dosyasını da commit'leyin. Cloudflare build çalıştırmaz; repodaki derlenmiş dosyayı yayınlar.
+
+## 4. Geliştirme ve yayın
+
+```bash
+npm install          # ilk kurulumda bir kez
+npm run watch        # sınıf değiştikçe css/tailwind.css'i otomatik derler
+npm run dev          # http://localhost:8080 (uzantısız adresleri destekler)
+npm run build        # commit öncesi küçültülmüş çıktı
+```
+
+- Adresler uzantısızdır: `/hakkimizda`, `/kurumsal#tuzuk`. Tüm iç linkler ve dosya yolları `/` ile başlar; bu yüzden sayfaları doğrudan dosyadan (`file://`) açmak yerine `npm run dev` kullanın.
+- Yayın: Cloudflare Pages projesi `mayeko-org` (GitHub `main` dalı). `main`'e gönderilen her commit otomatik yayınlanır.

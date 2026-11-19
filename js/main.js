@@ -10,12 +10,12 @@
 // Eski index.html#bolum bağlantılarını yeni sayfalara yönlendir
 (function redirectLegacyAnchors() {
   const map = {
-    hakkimizda: 'hakkimizda.html',
-    alanlar: 'alanlar.html',
-    metodoloji: 'metodoloji.html',
-    isbirligi: 'isbirligi.html',
-    kurumsal: 'kurumsal.html',
-    iletisim: 'iletisim.html',
+    hakkimizda: '/hakkimizda',
+    alanlar: '/alanlar',
+    metodoloji: '/metodoloji',
+    isbirligi: '/isbirligi',
+    kurumsal: '/kurumsal',
+    iletisim: '/iletisim',
   };
   if (document.body && document.body.getAttribute('data-page') === 'home') {
     const target = map[window.location.hash.replace('#', '')];
@@ -49,7 +49,7 @@ function applyLanguage(lang) {
   document.querySelectorAll('[data-bylaws-link]').forEach((link) => {
     link.setAttribute(
       'href',
-      currentLang === 'en' ? 'assets/docs/bylaws-summary-en.html' : 'assets/docs/tuzuk-ozeti-tr.html'
+      currentLang === 'en' ? '/assets/docs/bylaws-summary-en' : '/assets/docs/tuzuk-ozeti-tr'
     );
   });
 

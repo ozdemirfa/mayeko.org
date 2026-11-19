@@ -1,0 +1,4 @@
+/* Tailwind giriş dosyası — çıktı: css/tailwind.css (npm run build) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -6,11 +6,11 @@
  */
 (function () {
   const NAV = [
-    { id: 'hakkimizda', href: 'hakkimizda.html', tr: 'Hakkımızda', en: 'About' },
-    { id: 'alanlar', href: 'alanlar.html', tr: 'Stratejik Alanlar', en: 'Focus Areas' },
-    { id: 'metodoloji', href: 'metodoloji.html', tr: 'Metodoloji', en: 'Methodology' },
-    { id: 'isbirligi', href: 'isbirligi.html', tr: 'İş Birlikleri', en: 'Partnerships' },
-    { id: 'kurumsal', href: 'kurumsal.html', tr: 'Kurumsal', en: 'Governance' },
+    { id: 'hakkimizda', href: '/hakkimizda', tr: 'Hakkımızda', en: 'About' },
+    { id: 'alanlar', href: '/alanlar', tr: 'Stratejik Alanlar', en: 'Focus Areas' },
+    { id: 'metodoloji', href: '/metodoloji', tr: 'Metodoloji', en: 'Methodology' },
+    { id: 'isbirligi', href: '/isbirligi', tr: 'İş Birlikleri', en: 'Partnerships' },
+    { id: 'kurumsal', href: '/kurumsal', tr: 'Kurumsal', en: 'Governance' },
   ];
 
   const page = document.body.getAttribute('data-page') || '';
@@ -20,8 +20,8 @@
     '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>';
 
   const brand = (light) => `
-    <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="MAYEKO — Ana Sayfa">
-      <img src="assets/img/logo.svg" alt="" class="w-10 h-10 rounded-xl" />
+    <a href="/" class="flex items-center gap-3 shrink-0" aria-label="MAYEKO — Ana Sayfa">
+      <img src="/assets/img/logo.svg" alt="" class="w-10 h-10 rounded-xl" />
       <span class="leading-tight">
         <span class="block font-heading font-extrabold text-[1.05rem] tracking-tight ${light ? 'text-white' : 'text-marine'}">MAYEKO</span>
         <span class="block text-[0.72rem] font-medium ${light ? 'text-slate-300' : 'text-mutedSlate'}"
@@ -45,7 +45,7 @@
           <button type="button" class="lang-btn" onclick="toggleLanguage()" aria-label="Dil değiştir / Switch language">
             ${globeIcon}<span data-lang-indicator>EN</span>
           </button>
-          <a href="iletisim.html" class="btn btn-primary hidden sm:inline-flex !py-2.5 !px-5 !text-sm"${current('iletisim')}
+          <a href="/iletisim" class="btn btn-primary hidden sm:inline-flex !py-2.5 !px-5 !text-sm"${current('iletisim')}
              data-tr="İletişim" data-en="Contact">İletişim</a>
           <button type="button" id="menuBtn" class="lg:hidden inline-grid place-items-center w-10 h-10 rounded-full border border-slate-200 text-marine"
                   aria-label="Menü" aria-expanded="false" aria-controls="mobileMenu">
@@ -58,7 +58,7 @@
 
       <nav id="mobileMenu" class="mobile-menu hidden lg:hidden pb-5 pt-1 space-y-1" aria-label="Mobil menü">
         ${NAV.map((n) => `<a href="${n.href}" class="block px-4 py-3 rounded-xl text-charcoal hover:bg-glacier"${current(n.id)} data-tr="${n.tr}" data-en="${n.en}">${n.tr}</a>`).join('')}
-        <a href="iletisim.html" class="block px-4 py-3 rounded-xl text-charcoal hover:bg-glacier"${current('iletisim')} data-tr="İletişim" data-en="Contact">İletişim</a>
+        <a href="/iletisim" class="block px-4 py-3 rounded-xl text-charcoal hover:bg-glacier"${current('iletisim')} data-tr="İletişim" data-en="Contact">İletişim</a>
       </nav>
     </div>
   </header>`;
@@ -90,7 +90,7 @@
           <ul class="space-y-2.5 text-sm">
             <li><a href="mailto:info@mayeko.org">info@mayeko.org</a></li>
             <li data-tr="Ortahisar / Trabzon, Türkiye" data-en="Ortahisar / Trabzon, Türkiye">Ortahisar / Trabzon, Türkiye</li>
-            <li class="pt-2"><a href="iletisim.html" class="link-arrow !text-digitalCyan hover:!text-white">
+            <li class="pt-2"><a href="/iletisim" class="link-arrow !text-digitalCyan hover:!text-white">
               <span data-tr="Bize yazın" data-en="Get in touch">Bize yazın</span><span>→</span></a></li>
           </ul>
         </div>
@@ -99,8 +99,8 @@
       <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4 justify-between text-xs text-slate-400">
         <p>© ${year} <span data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)" data-en="Blue and Green Ecosystem Development Association (BGEDA / MAYEKO)">Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)</span></p>
         <div class="flex gap-5">
-          <a href="kurumsal.html#tuzuk" data-tr="Dernek Tüzüğü" data-en="Bylaws">Dernek Tüzüğü</a>
-          <a href="gizlilik.html" data-tr="KVKK &amp; Gizlilik" data-en="Privacy">KVKK &amp; Gizlilik</a>
+          <a href="/kurumsal#tuzuk" data-tr="Dernek Tüzüğü" data-en="Bylaws">Dernek Tüzüğü</a>
+          <a href="/gizlilik" data-tr="KVKK &amp; Gizlilik" data-en="Privacy">KVKK &amp; Gizlilik</a>
         </div>
       </div>
     </div>
