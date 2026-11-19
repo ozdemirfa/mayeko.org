@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA) | mayeko.org</title>
+  <meta
+    name="description"
+    content="Ortahisar/Trabzon merkezli Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA); mavi ekonomi, yeşil dönüşüm ve dijital uyum eksenlerinde yerel, ulusal ve uluslararası projeler geliştirir."
+  />
+  <meta name="keywords" content="Mavi ve Yeşil Ekosistem Geliştirme Derneği, MAYEKO, BGEDA, mayeko.org, mavi ekonomi, yeşil dönüşüm, dijital dönüşüm, Trabzon STK, AB projeleri, Horizon Europe, Erasmus+, Interreg Karadeniz" />
+  <meta property="og:title" content="Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)" />
+  <meta property="og:description" content="Gelişen Toplumlar ve Ekosistemler İçin Bağlantılar Kuruyoruz — Mavi, Yeşil ve Dijital Dönüşüm." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mayeko.org" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Yazı Tipleri: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS & Kurumsal Renk Paleti -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marine: '#0B3954',      // Ana Renk: Derin Karadeniz Mavisi
+            emeraldEco: '#1B7F5C',  // İkincil Renk: Ekosistem Yeşili
+            digitalCyan: '#00A896', // Vurgu Rengi: Dijital Turkuaz
+            glacier: '#E8F4F8',     // Yumuşak Vurgu: Buzul Mavisi
+            offWhite: '#F9FBFD',    // Arka Plan: Saf Kırık Beyaz
+            charcoal: '#1E293B',    // Metin Rengi: Koyu Antrasit
+            mutedSlate: '#64748B'   // İkincil Metin: Nötr Gri
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased selection:bg-digitalCyan selection:text-white">
+
+  <!-- Üst Bilgi Şeridi (Top Institutional Bar) -->
+  <div class="bg-marine text-slate-200 text-xs border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-2 truncate">
+        <span class="w-2 h-2 rounded-full bg-digitalCyan shrink-0"></span>
+        <span
+          class="font-medium tracking-wide truncate"
+          data-tr="MAYEKO • Mavi ve Yeşil Ekosistem Geliştirme Derneği (Ortahisar / Trabzon)"
+          data-en="BGEDA • Blue and Green Ecosystem Development Association (Ortahisar / Trabzon, Türkiye)"
+        >
+          MAYEKO • Mavi ve Yeşil Ekosistem Geliştirme Derneği (Ortahisar / Trabzon)
+        </span>
+      </div>
+      <div class="hidden sm:flex items-center gap-5 shrink-0">
+        <a href="mailto:info@mayeko.org" class="hover:text-digitalCyan transition-colors">info@mayeko.org</a>
+        <span class="text-white/25">|</span>
+        <a
+          href="assets/docs/tuzuk-ozeti-tr.html"
+          data-bylaws-link
+          class="hover:text-digitalCyan transition-colors font-medium"
+          data-tr="Resmi Tüzük Özeti (Md. 1-27)"
+          data-en="Official Bylaws Summary (Art. 1-27)"
+        >
+          Resmi Tüzük Özeti (Md. 1-27)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Üst Menü (Navbar) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <img
+            src="assets/img/logo.svg"
+            alt="MAYEKO / BGEDA Logo"
+            class="w-11 h-11 rounded-xl shadow-sm group-hover:scale-105 transition-transform"
+          />
+          <div>
+            <div class="flex items-center gap-2">
+              <span
+                class="font-heading font-extrabold text-marine text-sm sm:text-base leading-tight"
+                data-tr="Mavi ve Yeşil Ekosistem"
+                data-en="Blue &amp; Green Ecosystem"
+              >
+                Mavi ve Yeşil Ekosistem
+              </span>
+              <span class="hidden xl:inline-block px-2 py-0.5 rounded bg-glacier text-marine font-bold text-[10px] tracking-wider">
+                MAYEKO / BGEDA
+              </span>
+            </div>
+            <span
+              class="block text-xs text-mutedSlate font-medium"
+              data-tr="Geliştirme Derneği • mayeko.org"
+              data-en="Development Association • mayeko.org"
+            >
+              Geliştirme Derneği • mayeko.org
+            </span>
+          </div>
+        </a>
+
+        <!-- Masaüstü Menü -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-charcoal">
+          <a href="#hakkimizda" class="nav-link hover:text-digitalCyan transition-colors" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+          <a href="#alanlar" class="nav-link hover:text-digitalCyan transition-colors" data-tr="Stratejik Alanlar" data-en="Strategic Themes">Stratejik Alanlar</a>
+          <a href="#metodoloji" class="nav-link hover:text-digitalCyan transition-colors" data-tr="Metodoloji" data-en="Methodology">Metodoloji</a>
+          <a href="#isbirligi" class="nav-link hover:text-digitalCyan transition-colors" data-tr="İş Birlikleri" data-en="Partnerships">İş Birlikleri</a>
+          <a href="#kurumsal" class="nav-link hover:text-digitalCyan transition-colors" data-tr="Tüzük &amp; Kurumsal" data-en="Bylaws &amp; Governance">Tüzük &amp; Kurumsal</a>
+          <a href="#iletisim" class="nav-link hover:text-digitalCyan transition-colors" data-tr="İletişim" data-en="Contact">İletişim</a>
+        </nav>
+
+        <!-- Dil Değiştirici & CTA & Mobil Menü Butonu -->
+        <div class="flex items-center gap-2.5">
+          <button
+            id="langToggle"
+            type="button"
+            onclick="toggleLanguage()"
+            aria-label="Dil Değiştir / Switch Language"
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-slate-300 bg-offWhite text-xs font-bold text-marine hover:bg-glacier hover:border-digitalCyan transition-colors"
+          >
+            <svg class="w-3.5 h-3.5 text-digitalCyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span data-lang-indicator>TR • EN</span>
+          </button>
+
+          <a
+            href="#iletisim"
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-marine text-white text-xs sm:text-sm font-semibold hover:bg-emeraldEco transition-colors shadow-sm"
+            data-tr="Ortaklık Başvurusu"
+            data-en="Partner With Us"
+          >
+            Ortaklık Başvurusu
+          </a>
+
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-label="Menüyü Aç/Kapat"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-200 text-marine hover:bg-glacier"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobil Açılır Menü -->
+      <div id="mobileMenu" class="hidden lg:hidden pb-5 pt-2 border-t border-slate-200/80 space-y-2 text-sm font-medium">
+        <a href="#hakkimizda" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-glacier text-charcoal" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        <a href="#alanlar" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-glacier text-charcoal" data-tr="Stratejik Alanlar" data-en="Strategic Themes">Stratejik Alanlar</a>
+        <a href="#metodoloji" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-glacier text-charcoal" data-tr="Çalışma Metodolojisi" data-en="Methodology">Çalışma Metodolojisi</a>
+        <a href="#isbirligi" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-glacier text-charcoal" data-tr="İş Birlikleri &amp; Fonlar" data-en="Partnerships &amp; Grants">İş Birlikleri &amp; Fonlar</a>
+        <a href="#kurumsal" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg hover:bg-glacier text-charcoal" data-tr="Tüzük &amp; Kurumsal Yapı" data-en="Bylaws &amp; Governance">Tüzük &amp; Kurumsal Yapı</a>
+        <a href="#iletisim" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg bg-marine text-white text-center font-semibold" data-tr="Ortaklık Başvurusu / İletişim" data-en="Partnership Inquiry / Contact">Ortaklık Başvurusu / İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (Karşılama) Bölümü -->
+  <section class="hero-pattern text-white py-16 sm:py-20 lg:py-28">
+    <div class="hero-grid-overlay absolute inset-0 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Sol: Ana Mesaj & CTA -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-glacier mb-6">
+            <span class="w-2 h-2 rounded-full bg-digitalCyan animate-pulse"></span>
+            <span
+              data-tr="ORTAHİSAR / TRABZON • YEREL, ULUSAL &amp; ULUSLARARASI FAALİYET"
+              data-en="ORTAHİSAR / TRABZON • LOCAL, NATIONAL &amp; INTERNATIONAL SCOPE"
+            >
+              ORTAHİSAR / TRABZON • YEREL, ULUSAL &amp; ULUSLARARASI FAALİYET
+            </span>
+          </div>
+
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6"
+            data-tr="Gelişen Toplumlar ve Ekosistemler İçin Bağlantılar Kuruyoruz"
+            data-en="Building Connections for Thriving Communities and Ecosystems"
+          >
+            Gelişen Toplumlar ve Ekosistemler İçin Bağlantılar Kuruyoruz
+          </h1>
+
+          <p
+            class="text-base sm:text-lg text-slate-200 leading-relaxed mb-8 font-normal"
+            data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA); toplumun sosyal, kültürel ve iktisadi yaşamına ile yaşadığı çevreye pozitif katkı sağlamak amacıyla mavi ekonomi, yeşil dönüşüm ve dijital uyum eksenlerinde yenilikçi projeler, araştırmalar ve çok paydaşlı iş birlikleri geliştirir."
+            data-en="The Blue and Green Ecosystem Development Association (BGEDA / MAYEKO) develops innovative projects, research, and multi-stakeholder collaborations across blue economy, green transition, and digital adaptation to make a positive contribution to social, cultural, and economic life and the environment."
+          >
+            Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA); toplumun sosyal, kültürel ve iktisadi yaşamına ile yaşadığı çevreye pozitif katkı sağlamak amacıyla mavi ekonomi, yeşil dönüşüm ve dijital uyum eksenlerinde yenilikçi projeler, araştırmalar ve çok paydaşlı iş birlikleri geliştirir.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#alanlar"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-digitalCyan text-white font-semibold text-sm hover:bg-emeraldEco transition-colors shadow-lg shadow-black/20"
+            >
+              <span data-tr="Stratejik Alanlarımızı İnceleyin" data-en="Explore Strategic Themes">Stratejik Alanlarımızı İnceleyin</span>
+              <span>→</span>
+            </a>
+            <a
+              href="#iletisim"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 text-white border border-white/25 font-semibold text-sm hover:bg-white/20 transition-colors"
+              data-tr="Proje Ortaklığı &amp; İletişim"
+              data-en="Project Partnership &amp; Contact"
+            >
+              Proje Ortaklığı &amp; İletişim
+            </a>
+          </div>
+
+          <!-- Alt Özet Metrik Şeridi -->
+          <div class="mt-10 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 sm:gap-8">
+            <div>
+              <span class="block text-2xl sm:text-3xl font-heading font-extrabold text-digitalCyan">03</span>
+              <span class="text-xs text-slate-300" data-tr="Stratejik Dönüşüm Ekseni (Mavi • Yeşil • Dijital)" data-en="Transformation Pillars (Blue • Green • Digital)">
+                Stratejik Dönüşüm Ekseni (Mavi • Yeşil • Dijital)
+              </span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-heading font-extrabold text-emerald-400">05</span>
+              <span class="text-xs text-slate-300" data-tr="Adımlı Araştırma ve Uygulama Metodolojisi" data-en="Step Research &amp; Delivery Methodology">
+                Adımlı Araştırma ve Uygulama Metodolojisi
+              </span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-heading font-extrabold text-glacier">27</span>
+              <span class="text-xs text-slate-300" data-tr="Maddelik Şeffaf Dernek Tüzüğü Güvencesi" data-en="Articles of Transparent Statutory Governance">
+                Maddelik Şeffaf Dernek Tüzüğü Güvencesi
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Üçlü Dönüşüm Ekosistem Kartı -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 shadow-2xl space-y-5">
+            <div class="flex items-center justify-between border-b border-white/15 pb-4">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-digitalCyan" data-tr="BÜTÜNLEŞİK YAKLAŞIM" data-en="INTEGRATED APPROACH">BÜTÜNLEŞİK YAKLAŞIM</span>
+                <h2 class="text-lg font-bold text-white mt-0.5" data-tr="Üçlü Dönüşüm Ekosistemi" data-en="Triple Transformation Ecosystem">Üçlü Dönüşüm Ekosistemi</h2>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 text-xs font-mono text-glacier">mayeko.org</span>
+            </div>
+
+            <!-- 1. Mavi -->
+            <a href="#alanlar" class="block p-4 rounded-xl bg-marine/80 border border-sky-400/30 hover:border-sky-300 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-sky-300">01 • BLUE TRANSFORMATION</span>
+                <span class="text-xs text-slate-300" data-tr="Karadeniz &amp; Su Havzaları" data-en="Black Sea &amp; Water Basins">Karadeniz &amp; Su Havzaları</span>
+              </div>
+              <h3 class="text-sm font-bold text-white" data-tr="Mavi Ekonomi ve Su Ekosistemleri" data-en="Blue Economy &amp; Aquatic Ecosystems">Mavi Ekonomi ve Su Ekosistemleri</h3>
+              <p class="text-xs text-slate-300 mt-1" data-tr="Deniz ve kıyı ekosistemlerinin korunması, sürdürülebilir mavi büyüme ve su yönetimi." data-en="Marine and coastal ecosystem protection, sustainable blue growth, and water governance.">
+                Deniz ve kıyı ekosistemlerinin korunması, sürdürülebilir mavi büyüme ve su yönetimi.
+              </p>
+            </a>
+
+            <!-- 2. Yeşil -->
+            <a href="#alanlar" class="block p-4 rounded-xl bg-emeraldEco/35 border border-emerald-400/30 hover:border-emerald-300 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-emerald-300">02 • GREEN TRANSFORMATION</span>
+                <span class="text-xs text-slate-300" data-tr="İklim &amp; Döngüsellik" data-en="Climate &amp; Circularity">İklim &amp; Döngüsellik</span>
+              </div>
+              <h3 class="text-sm font-bold text-white" data-tr="Yeşil Dönüşüm, Döngüsel Ekonomi &amp; Afet Dirençliliği" data-en="Green Transition, Circular Economy &amp; Disaster Resilience">Yeşil Dönüşüm, Döngüsel Ekonomi &amp; Afet Dirençliliği</h3>
+              <p class="text-xs text-slate-300 mt-1" data-tr="İklim uyumu, endüstriyel simbiyoz, yenilenebilir enerji ve sıfır atık uygulamaları." data-en="Climate adaptation, industrial symbiosis, renewable energy, and zero-waste practices.">
+                İklim uyumu, endüstriyel simbiyoz, yenilenebilir enerji ve sıfır atık uygulamaları.
+              </p>
+            </a>
+
+            <!-- 3. Dijital -->
+            <a href="#alanlar" class="block p-4 rounded-xl bg-digitalCyan/25 border border-teal-300/30 hover:border-teal-200 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-teal-200">03 • DIGITAL TRANSFORMATION</span>
+                <span class="text-xs text-slate-300" data-tr="Geleceğin Becerileri" data-en="Future Skills">Geleceğin Becerileri</span>
+              </div>
+              <h3 class="text-sm font-bold text-white" data-tr="Dijital Uyum, Yeni Teknolojiler ve Açık Bilgi" data-en="Digital Adaptation, Emerging Tech &amp; Open Knowledge">Dijital Uyum, Yeni Teknolojiler ve Açık Bilgi</h3>
+              <p class="text-xs text-slate-300 mt-1" data-tr="AR/VR, blokzincir, e-ticaret, e-oyun, geleceğin meslekleri ve açık dijital kütüphaneler." data-en="AR/VR, blockchain, e-commerce, e-gaming, future professions, and open digital libraries.">
+                AR/VR, blokzincir, e-ticaret, e-oyun, geleceğin meslekleri ve açık dijital kütüphaneler.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kurumsal Kimlik ve Amaç (Tüzük Madde 1 & 2) -->
+  <section id="hakkimizda" class="py-16 lg:py-24 bg-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-emeraldEco"
+            data-tr="Kurumsal Kimlik ve Kuruluş Amacı"
+            data-en="Institutional Identity &amp; Mission"
+          >
+            Kurumsal Kimlik ve Kuruluş Amacı
+          </span>
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-marine mt-2 mb-4"
+            data-tr="Yerelden Küresele Sürdürülebilir ve Kapsayıcı Etki"
+            data-en="Sustainable and Inclusive Impact from Local to Global"
+          >
+            Yerelden Küresele Sürdürülebilir ve Kapsayıcı Etki
+          </h2>
+          <p
+            class="text-mutedSlate text-sm sm:text-base leading-relaxed mb-5"
+            data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA), üyelerinin sahip olduğu akademik, teknik ve sektörel uzmanlıkları bir araya getirerek yerel, bölgesel, ulusal ve uluslararası düzeyde kamu yararına projeler, bilimsel araştırmalar ve kapasite geliştirme programları yürütmektedir."
+            data-en="The Blue and Green Ecosystem Development Association (BGEDA / MAYEKO) brings together the academic, technical, and sectoral expertise of its members to execute public-benefit projects, scientific research, and capacity-building programs at local, regional, national, and international levels."
+          >
+            Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA), üyelerinin sahip olduğu akademik, teknik ve sektörel uzmanlıkları bir araya getirerek yerel, bölgesel, ulusal ve uluslararası düzeyde kamu yararına projeler, bilimsel araştırmalar ve kapasite geliştirme programları yürütmektedir.
+          </p>
+
+          <!-- Tüzük Dayanağı Kutusu -->
+          <div class="p-5 rounded-2xl bg-glacier/80 border border-digitalCyan/25 text-xs sm:text-sm text-marine space-y-2">
+            <div class="flex items-center justify-between">
+              <strong data-tr="Resmi Tüzük Dayanağı (Madde 1 &amp; 2)" data-en="Statutory Basis (Articles 1 &amp; 2)">Resmi Tüzük Dayanağı (Madde 1 &amp; 2)</strong>
+              <span class="px-2 py-0.5 rounded bg-marine text-white text-[10px] font-bold">TR-61</span>
+            </div>
+            <p
+              class="text-charcoal/85 text-xs leading-relaxed"
+              data-tr="Derneğin merkezi Ortahisar/Trabzon olup; genel kurul kararıyla yurt içinde ve yurt dışında şube ve temsilcilik açma, ulusal ve uluslararası ağlara, platformlara ve federasyonlara katılma yetkisine sahiptir."
+              data-en="Headquartered in Ortahisar/Trabzon, Türkiye, the Association is statutorily authorized to open branches and representative offices domestically and abroad, and to join national and international networks, platforms, and federations."
+            >
+              Derneğin merkezi Ortahisar/Trabzon olup; genel kurul kararıyla yurt içinde ve yurt dışında şube ve temsilcilik açma, ulusal ve uluslararası ağlara, platformlara ve federasyonlara katılma yetkisine sahiptir.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Temel Amaç Kartı -->
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+          <div class="eco-card p-6 rounded-2xl bg-offWhite border border-slate-200/90">
+            <div class="w-11 h-11 rounded-xl bg-marine text-white flex items-center justify-center font-heading font-bold mb-4 shadow-sm">
+              01
+            </div>
+            <h3 class="font-bold text-marine text-lg mb-2" data-tr="Toplumsal ve İktisadi Gelişim" data-en="Social &amp; Economic Development">
+              Toplumsal ve İktisadi Gelişim
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed"
+              data-tr="Sosyal, kültürel ve ekonomik kalkınmayı destekleyen yenilikçi girişimcilik, istihdam edilebilirlik, geleceğin meslekleri ve kapsayıcı büyüme projeleri."
+              data-en="Innovative entrepreneurship, employability, professions of the future, and inclusive growth projects supporting social, cultural, and economic development."
+            >
+              Sosyal, kültürel ve ekonomik kalkınmayı destekleyen yenilikçi girişimcilik, istihdam edilebilirlik, geleceğin meslekleri ve kapsayıcı büyüme projeleri.
+            </p>
+          </div>
+
+          <div class="eco-card p-6 rounded-2xl bg-offWhite border border-slate-200/90">
+            <div class="w-11 h-11 rounded-xl bg-emeraldEco text-white flex items-center justify-center font-heading font-bold mb-4 shadow-sm">
+              02
+            </div>
+            <h3 class="font-bold text-marine text-lg mb-2" data-tr="Çevre ve Ekosistem Koruma" data-en="Environment &amp; Ecosystem Protection">
+              Çevre ve Ekosistem Koruma
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed"
+              data-tr="Mavi ve yeşil ekosistemlerin korunması, iklim değişikliğine uyum, döngüsel ekonomi, temiz enerji ve afet dirençliliği çalışmaları."
+              data-en="Protection of blue and green ecosystems, climate change adaptation, circular economy, clean energy, and disaster resilience initiatives."
+            >
+              Mavi ve yeşil ekosistemlerin korunması, iklim değişikliğine uyum, döngüsel ekonomi, temiz enerji ve afet dirençliliği çalışmaları.
+            </p>
+          </div>
+
+          <div class="eco-card p-6 rounded-2xl bg-offWhite border border-slate-200/90">
+            <div class="w-11 h-11 rounded-xl bg-digitalCyan text-white flex items-center justify-center font-heading font-bold mb-4 shadow-sm">
+              03
+            </div>
+            <h3 class="font-bold text-marine text-lg mb-2" data-tr="Kültür, Gençlik ve Kapsayıcılık" data-en="Culture, Youth &amp; Social Inclusion">
+              Kültür, Gençlik ve Kapsayıcılık
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed"
+              data-tr="Kültürel mirasın korunması, yaratıcı endüstriler, gençlik çalışmaları, insan hakları ve dezavantajlı grupların toplumsal yaşama adaptasyonu."
+              data-en="Preservation of cultural heritage, creative industries, youth empowerment, human rights, and social integration of disadvantaged groups."
+            >
+              Kültürel mirasın korunması, yaratıcı endüstriler, gençlik çalışmaları, insan hakları ve dezavantajlı grupların toplumsal yaşama adaptasyonu.
+            </p>
+          </div>
+
+          <div class="eco-card p-6 rounded-2xl bg-offWhite border border-slate-200/90">
+            <div class="w-11 h-11 rounded-xl bg-marine text-white flex items-center justify-center font-heading font-bold mb-4 shadow-sm">
+              04
+            </div>
+            <h3 class="font-bold text-marine text-lg mb-2" data-tr="Çok Paydaşlı Uluslararası Ağlar" data-en="Multi-Stakeholder International Networks">
+              Çok Paydaşlı Uluslararası Ağlar
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed"
+              data-tr="Üniversiteler, kamu kurumları, yerel yönetimler, kalkınma ajansları ve uluslararası hibe kuruluşlarıyla ortak ağ ve kümelenme modelleri."
+              data-en="Joint networks and clustering models with universities, public authorities, municipalities, development agencies, and international grant-makers."
+            >
+              Üniversiteler, kamu kurumları, yerel yönetimler, kalkınma ajansları ve uluslararası hibe kuruluşlarıyla ortak ağ ve kümelenme modelleri.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Üç Stratejik Dönüşüm Ekseni (Sunum Slayt 4-6) -->
+  <section id="alanlar" class="py-16 lg:py-24 bg-offWhite">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-wider text-digitalCyan" data-tr="Tematik Portföyümüz (Tüzük Md. 2)" data-en="Thematic Portfolio (Bylaws Art. 2)">
+            Tematik Portföyümüz (Tüzük Md. 2)
+          </span>
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-marine mt-2 mb-3"
+            data-tr="Üç Birbirine Bağlı Stratejik Dönüşüm Ekseni"
+            data-en="Three Interconnected Strategic Transformations"
+          >
+            Üç Birbirine Bağlı Stratejik Dönüşüm Ekseni
+          </h2>
+          <p
+            class="text-sm sm:text-base text-mutedSlate"
+            data-tr="Proje ve araştırmalarımız mavi ekonomi, yeşil sürdürülebilirlik ve dijital yetkinliklerin kesişiminde şekillenir."
+            data-en="Our projects and research are shaped at the intersection of the blue economy, green sustainability, and digital competencies."
+          >
+            Proje ve araştırmalarımız mavi ekonomi, yeşil sürdürülebilirlik ve dijital yetkinliklerin kesişiminde şekillenir.
+          </p>
+        </div>
+
+        <!-- Eksen Filtre Butonları -->
+        <div class="flex flex-wrap gap-2">
+          <button
+            type="button"
+            data-theme-btn="all"
+            onclick="filterThemes('all')"
+            class="px-3.5 py-2 rounded-lg border border-marine bg-marine text-white text-xs font-semibold transition-colors"
+            data-tr="Tüm Eksenler (3)"
+            data-en="All Pillars (3)"
+          >
+            Tüm Eksenler (3)
+          </button>
+          <button
+            type="button"
+            data-theme-btn="blue"
+            onclick="filterThemes('blue')"
+            class="px-3.5 py-2 rounded-lg border border-slate-200 bg-white text-charcoal text-xs font-semibold hover:border-marine transition-colors"
+            data-tr="01 • Mavi"
+            data-en="01 • Blue"
+          >
+            01 • Mavi
+          </button>
+          <button
+            type="button"
+            data-theme-btn="green"
+            onclick="filterThemes('green')"
+            class="px-3.5 py-2 rounded-lg border border-slate-200 bg-white text-charcoal text-xs font-semibold hover:border-emeraldEco transition-colors"
+            data-tr="02 • Yeşil"
+            data-en="02 • Green"
+          >
+            02 • Yeşil
+          </button>
+          <button
+            type="button"
+            data-theme-btn="digital"
+            onclick="filterThemes('digital')"
+            class="px-3.5 py-2 rounded-lg border border-slate-200 bg-white text-charcoal text-xs font-semibold hover:border-digitalCyan transition-colors"
+            data-tr="03 • Dijital"
+            data-en="03 • Digital"
+          >
+            03 • Dijital
+          </button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 01. Mavi Dönüşüm -->
+        <article
+          data-theme-card="blue"
+          class="eco-card bg-white rounded-2xl p-8 border border-slate-200/80 border-t-4 border-t-marine shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="inline-block px-3 py-1 rounded-full bg-marine/10 text-marine text-xs font-bold">
+                01 • BLUE TRANSFORMATION
+              </span>
+              <span class="text-xs font-semibold text-mutedSlate">#0B3954</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-marine mb-3"
+              data-tr="Mavi Ekonomi ve Su Ekosistemleri"
+              data-en="Blue Economy &amp; Aquatic Ecosystems"
+            >
+              Mavi Ekonomi ve Su Ekosistemleri
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed mb-6"
+              data-tr="Karadeniz başta olmak üzere deniz, kıyı ve iç su ekosistemlerinin korunması, biyoçeşitliliğin izlenmesi ve sürdürülebilir mavi ekonomi değer zincirlerinin geliştirilmesi."
+              data-en="Protection of marine, coastal, and freshwater ecosystems—particularly in the Black Sea basin—biodiversity monitoring, and sustainable blue economy value chains."
+            >
+              Karadeniz başta olmak üzere deniz, kıyı ve iç su ekosistemlerinin korunması, biyoçeşitliliğin izlenmesi ve sürdürülebilir mavi ekonomi değer zincirlerinin geliştirilmesi.
+            </p>
+            <ul class="space-y-2.5 text-xs text-charcoal font-medium">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-marine mt-1.5 shrink-0"></span>
+                <span data-tr="Deniz ve İç Su Ekosistemlerini Koruma Araştırmaları" data-en="Marine &amp; Freshwater Ecosystem Conservation Research">
+                  Deniz ve İç Su Ekosistemlerini Koruma Araştırmaları
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-marine mt-1.5 shrink-0"></span>
+                <span data-tr="Sürdürülebilir Balıkçılık, Su Ürünleri ve Kıyı Turizmi" data-en="Sustainable Fisheries, Aquaculture &amp; Coastal Tourism">
+                  Sürdürülebilir Balıkçılık, Su Ürünleri ve Kıyı Turizmi
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-marine mt-1.5 shrink-0"></span>
+                <span data-tr="Deniz Çöpleri ve Mikroplastik Kirliliği ile Mücadele" data-en="Combating Marine Litter &amp; Microplastic Pollution">
+                  Deniz Çöpleri ve Mikroplastik Kirliliği ile Mücadele
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-marine mt-1.5 shrink-0"></span>
+                <span data-tr="Mavi Girişimcilik ve Kıyı Toplulukları Kapasite Gelişimi" data-en="Blue Entrepreneurship &amp; Coastal Community Capacity Building">
+                  Mavi Girişimcilik ve Kıyı Toplulukları Kapasite Gelişimi
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-semibold text-marine">
+            <span data-tr="Odak: Interreg NEXT Karadeniz • AB Mavi Ekonomi" data-en="Focus: Interreg NEXT Black Sea • EU Blue Economy">
+              Odak: Interreg NEXT Karadeniz • AB Mavi Ekonomi
+            </span>
+          </div>
+        </article>
+
+        <!-- 02. Yeşil Dönüşüm -->
+        <article
+          data-theme-card="green"
+          class="eco-card bg-white rounded-2xl p-8 border border-slate-200/80 border-t-4 border-t-emeraldEco shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="inline-block px-3 py-1 rounded-full bg-emeraldEco/10 text-emeraldEco text-xs font-bold">
+                02 • GREEN TRANSFORMATION
+              </span>
+              <span class="text-xs font-semibold text-mutedSlate">#1B7F5C</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-marine mb-3"
+              data-tr="Yeşil Dönüşüm ve İklim Eylemi"
+              data-en="Green Transition &amp; Climate Action"
+            >
+              Yeşil Dönüşüm ve İklim Eylemi
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed mb-6"
+              data-tr="İklim değişikliğine uyum ve etkilerinin azaltılması, döngüsel ekonomi, endüstriyel simbiyoz, temiz enerji dönüşümü ve afetlere karşı dirençli yerleşimler."
+              data-en="Climate change adaptation and mitigation, circular economy, industrial symbiosis, clean energy transition, and disaster-resilient settlements."
+            >
+              İklim değişikliğine uyum ve etkilerinin azaltılması, döngüsel ekonomi, endüstriyel simbiyoz, temiz enerji dönüşümü ve afetlere karşı dirençli yerleşimler.
+            </p>
+            <ul class="space-y-2.5 text-xs text-charcoal font-medium">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emeraldEco mt-1.5 shrink-0"></span>
+                <span data-tr="Döngüsel Ekonomi, Sıfır Atık ve Geri Dönüşüm Modelleri" data-en="Circular Economy, Zero Waste &amp; Upcycling Models">
+                  Döngüsel Ekonomi, Sıfır Atık ve Geri Dönüşüm Modelleri
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emeraldEco mt-1.5 shrink-0"></span>
+                <span data-tr="Endüstriyel Simbiyoz, Enerji Verimliliği ve Yenilenebilir Enerji" data-en="Industrial Symbiosis, Energy Efficiency &amp; Renewables">
+                  Endüstriyel Simbiyoz, Enerji Verimliliği ve Yenilenebilir Enerji
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emeraldEco mt-1.5 shrink-0"></span>
+                <span data-tr="Afet Yönetimi, Taşkın/Heyelan Farkındalığı ve Dirençlilik" data-en="Disaster Risk Management, Flood/Landslide Awareness &amp; Resilience">
+                  Afet Yönetimi, Taşkın/Heyelan Farkındalığı ve Dirençlilik
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emeraldEco mt-1.5 shrink-0"></span>
+                <span data-tr="Avrupa Yeşil Mutabakatı ve Karbon Ayak İzi Uyumu" data-en="European Green Deal &amp; Carbon Footprint Compliance">
+                  Avrupa Yeşil Mutabakatı ve Karbon Ayak İzi Uyumu
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-semibold text-emeraldEco">
+            <span data-tr="Odak: Avrupa Yeşil Mutabakatı • Horizon Europe" data-en="Focus: European Green Deal • Horizon Europe">
+              Odak: Avrupa Yeşil Mutabakatı • Horizon Europe
+            </span>
+          </div>
+        </article>
+
+        <!-- 03. Dijital Dönüşüm -->
+        <article
+          data-theme-card="digital"
+          class="eco-card bg-white rounded-2xl p-8 border border-slate-200/80 border-t-4 border-t-digitalCyan shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="inline-block px-3 py-1 rounded-full bg-digitalCyan/10 text-digitalCyan text-xs font-bold">
+                03 • DIGITAL TRANSFORMATION
+              </span>
+              <span class="text-xs font-semibold text-mutedSlate">#00A896</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-marine mb-3"
+              data-tr="Dijital Uyum ve Geleceğin Becerileri"
+              data-en="Digital Adaptation &amp; Future Skills"
+            >
+              Dijital Uyum ve Geleceğin Becerileri
+            </h3>
+            <p
+              class="text-sm text-mutedSlate leading-relaxed mb-6"
+              data-tr="Toplumun, gençlerin ve kurumların yıkıcı teknolojilere uyumunu hızlandıran fizibilite çalışmaları, açık dijital kütüphaneler ve nitelikli işgücü eğitimleri."
+              data-en="Feasibility studies, open digital libraries, and workforce reskilling programs accelerating society's and youth's adaptation to emerging technologies."
+            >
+              Toplumun, gençlerin ve kurumların yıkıcı teknolojilere uyumunu hızlandıran fizibilite çalışmaları, açık dijital kütüphaneler ve nitelikli işgücü eğitimleri.
+            </p>
+            <ul class="space-y-2.5 text-xs text-charcoal font-medium">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-digitalCyan mt-1.5 shrink-0"></span>
+                <span data-tr="AR/VR, Blokzincir, Yapay Zeka, E-Oyun ve E-Ticaret Uyumu" data-en="AR/VR, Blockchain, AI, E-Gaming &amp; E-Commerce Adaptation">
+                  AR/VR, Blokzincir, Yapay Zeka, E-Oyun ve E-Ticaret Uyumu
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-digitalCyan mt-1.5 shrink-0"></span>
+                <span data-tr="Geleceğin Meslekleri ve Sektörel Yetkinlik Analizleri" data-en="Professions of the Future &amp; Sectoral Competency Analysis">
+                  Geleceğin Meslekleri ve Sektörel Yetkinlik Analizleri
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-digitalCyan mt-1.5 shrink-0"></span>
+                <span data-tr="Açık Erişimli Dijital ve Fiziksel Bilgi Bankaları" data-en="Open-Access Digital &amp; Physical Knowledge Repositories">
+                  Açık Erişimli Dijital ve Fiziksel Bilgi Bankaları
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-digitalCyan mt-1.5 shrink-0"></span>
+                <span data-tr="İkiz Dönüşüm (Yeşil + Dijital) Karar Destek Araçları" data-en="Twin Transition (Green + Digital) Decision Support Tools">
+                  İkiz Dönüşüm (Yeşil + Dijital) Karar Destek Araçları
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-semibold text-digitalCyan">
+            <span data-tr="Odak: Erasmus+ • İkiz Dönüşüm (Twin Transition)" data-en="Focus: Erasmus+ • Twin Transition (Green &amp; Digital)">
+              Odak: Erasmus+ • İkiz Dönüşüm (Twin Transition)
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Adımlı Çalışma Metodolojisi (Sunum Slayt 8) -->
+  <section id="metodoloji" class="py-16 lg:py-24 bg-white border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-emeraldEco" data-tr="Uygulama Çerçevesi (5 Adımlı Döngü)" data-en="Operational Framework (5-Step Cycle)">
+          Uygulama Çerçevesi (5 Adımlı Döngü)
+        </span>
+        <h2
+          class="text-2xl sm:text-3xl font-extrabold text-marine mt-2 mb-3"
+          data-tr="Fikirleri Ölçülebilir Toplumsal Etkiye Dönüştürme Metodolojimiz"
+          data-en="Our Methodology for Turning Ideas into Measurable Impact"
+        >
+          Fikirleri Ölçülebilir Toplumsal Etkiye Dönüştürme Metodolojimiz
+        </h2>
+        <p
+          class="text-sm text-mutedSlate"
+          data-tr="Derneğimiz yürüttüğü tüm yerel ve uluslararası projelerde kanıta dayalı, katılımcı ve şeffaf 5 aşamalı proje yaşam döngüsünü uygular."
+          data-en="Across all local and international initiatives, our Association applies an evidence-based, participatory, and transparent 5-stage project lifecycle."
+        >
+          Derneğimiz yürüttüğü tüm yerel ve uluslararası projelerde kanıta dayalı, katılımcı ve şeffaf 5 aşamalı proje yaşam döngüsünü uygular.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <!-- Adım 1 -->
+        <div class="method-step relative p-6 rounded-2xl bg-glacier/65 border border-slate-200/90">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-digitalCyan" data-tr="ADIM 01" data-en="STEP 01">ADIM 01</span>
+            <span class="w-7 h-7 rounded-lg bg-marine text-white text-xs font-bold flex items-center justify-center">1</span>
+          </div>
+          <h3 class="font-bold text-marine text-base mb-2" data-tr="Araştır (Research)" data-en="Research">Araştır (Research)</h3>
+          <p
+            class="text-xs text-mutedSlate leading-relaxed"
+            data-tr="İhtiyaç analizi, saha etüdü, veri toplama, fizibilite ve politika raporlaması."
+            data-en="Needs assessment, field surveys, data collection, feasibility, and policy reporting."
+          >
+            İhtiyaç analizi, saha etüdü, veri toplama, fizibilite ve politika raporlaması.
+          </p>
+        </div>
+
+        <!-- Adım 2 -->
+        <div class="method-step relative p-6 rounded-2xl bg-glacier/65 border border-slate-200/90">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-digitalCyan" data-tr="ADIM 02" data-en="STEP 02">ADIM 02</span>
+            <span class="w-7 h-7 rounded-lg bg-marine text-white text-xs font-bold flex items-center justify-center">2</span>
+          </div>
+          <h3 class="font-bold text-marine text-base mb-2" data-tr="Tasarla (Design)" data-en="Design">Tasarla (Design)</h3>
+          <p
+            class="text-xs text-mutedSlate leading-relaxed"
+            data-tr="Tematik proje kurgusu, mantıksal çerçeve matrisi ve ulusal/AB hibe başvuruları."
+            data-en="Thematic project design, logical framework matrices, and national/EU grant proposals."
+          >
+            Tematik proje kurgusu, mantıksal çerçeve matrisi ve ulusal/AB hibe başvuruları.
+          </p>
+        </div>
+
+        <!-- Adım 3 -->
+        <div class="method-step relative p-6 rounded-2xl bg-glacier/65 border border-slate-200/90">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-digitalCyan" data-tr="ADIM 03" data-en="STEP 03">ADIM 03</span>
+            <span class="w-7 h-7 rounded-lg bg-emeraldEco text-white text-xs font-bold flex items-center justify-center">3</span>
+          </div>
+          <h3 class="font-bold text-marine text-base mb-2" data-tr="Bağlantı Kur (Connect)" data-en="Connect">Bağlantı Kur (Connect)</h3>
+          <p
+            class="text-xs text-mutedSlate leading-relaxed"
+            data-tr="Kurumsal konsorsiyumlar, üniversite-STK-kamu ağları ve uzmanlık komisyonları."
+            data-en="Institutional consortia, university-NGO-public networks, and expert commissions."
+          >
+            Kurumsal konsorsiyumlar, üniversite-STK-kamu ağları ve uzmanlık komisyonları.
+          </p>
+        </div>
+
+        <!-- Adım 4 -->
+        <div class="method-step relative p-6 rounded-2xl bg-glacier/65 border border-slate-200/90">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-digitalCyan" data-tr="ADIM 04" data-en="STEP 04">ADIM 04</span>
+            <span class="w-7 h-7 rounded-lg bg-emeraldEco text-white text-xs font-bold flex items-center justify-center">4</span>
+          </div>
+          <h3 class="font-bold text-marine text-base mb-2" data-tr="Uygula (Deliver)" data-en="Deliver">Uygula (Deliver)</h3>
+          <p
+            class="text-xs text-mutedSlate leading-relaxed"
+            data-tr="Eğitimler, çalıştaylar, pilot saha uygulamaları, seminerler ve kapasite geliştirme."
+            data-en="Trainings, workshops, pilot field implementations, seminars, and capacity building."
+          >
+            Eğitimler, çalıştaylar, pilot saha uygulamaları, seminerler ve kapasite geliştirme.
+          </p>
+        </div>
+
+        <!-- Adım 5 -->
+        <div class="method-step relative p-6 rounded-2xl bg-glacier/65 border border-slate-200/90">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-digitalCyan" data-tr="ADIM 05" data-en="STEP 05">ADIM 05</span>
+            <span class="w-7 h-7 rounded-lg bg-digitalCyan text-white text-xs font-bold flex items-center justify-center">5</span>
+          </div>
+          <h3 class="font-bold text-marine text-base mb-2" data-tr="Paylaş (Share)" data-en="Share">Paylaş (Share)</h3>
+          <p
+            class="text-xs text-mutedSlate leading-relaxed"
+            data-tr="Açık erişimli yayınlar, dijital kütüphaneler, yaygınlaştırma etkinlikleri ve ortak mekanlar."
+            data-en="Open-access publications, digital libraries, dissemination events, and shared spaces."
+          >
+            Açık erişimli yayınlar, dijital kütüphaneler, yaygınlaştırma etkinlikleri ve ortak mekanlar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İş Birliği Modelleri ve Kurumsal Şeffaflık / Tüzük (Sunum Slayt 7 & 9 + Tüzük Md. 1-27) -->
+  <section id="isbirligi" class="py-16 lg:py-24 bg-offWhite">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+        <!-- Sol: İş Birliği ve Katılım Modelleri -->
+        <div class="lg:col-span-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-digitalCyan" data-tr="Ortaklık ve Fon Ekosistemi" data-en="Partnership &amp; Grant Ecosystem">
+            Ortaklık ve Fon Ekosistemi
+          </span>
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-marine mt-2 mb-3"
+            data-tr="Birlikte Etki Yaratma ve Katılım Modellerimiz"
+            data-en="Ways to Collaborate and Create Impact Together"
+          >
+            Birlikte Etki Yaratma ve Katılım Modellerimiz
+          </h2>
+          <p
+            class="text-sm text-mutedSlate mb-6"
+            data-tr="Üniversiteler, kamu kurumları, yerel yönetimler, sivil toplum kuruluşları ve uluslararası hibe programları için güvenilir proje ortağıyız."
+            data-en="We serve as a reliable project partner for universities, public authorities, municipalities, NGOs, and international grant programs."
+          >
+            Üniversiteler, kamu kurumları, yerel yönetimler, sivil toplum kuruluşları ve uluslararası hibe programları için güvenilir proje ortağıyız.
+          </p>
+
+          <div class="space-y-4">
+            <div class="p-5 bg-white rounded-xl border border-slate-200/90 shadow-sm">
+              <h3 class="font-bold text-marine text-sm sm:text-base" data-tr="1. Ortak Proje Geliştirme ve Konsorsiyum Ortaklığı" data-en="1. Joint Project Design &amp; Consortium Partnership">
+                1. Ortak Proje Geliştirme ve Konsorsiyum Ortaklığı
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-mutedSlate mt-1.5 leading-relaxed"
+                data-tr="Horizon Europe, Erasmus+, Interreg NEXT Karadeniz Havzası, TÜBİTAK, Kalkınma Ajansları (DOKA) ve büyükelçilik fonlarında koordinatör veya ortak olarak görev alma."
+                data-en="Acting as coordinator or consortium partner in Horizon Europe, Erasmus+, Interreg NEXT Black Sea Basin, TÜBİTAK, Development Agencies, and international grants."
+              >
+                Horizon Europe, Erasmus+, Interreg NEXT Karadeniz Havzası, TÜBİTAK, Kalkınma Ajansları (DOKA) ve büyükelçilik fonlarında koordinatör veya ortak olarak görev alma.
+              </p>
+            </div>
+
+            <div class="p-5 bg-white rounded-xl border border-slate-200/90 shadow-sm">
+              <h3 class="font-bold text-marine text-sm sm:text-base" data-tr="2. Bilgi Paylaşımı, Akademi ve Kapasite Geliştirme" data-en="2. Knowledge Sharing, Academy &amp; Capacity Building">
+                2. Bilgi Paylaşımı, Akademi ve Kapasite Geliştirme
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-mutedSlate mt-1.5 leading-relaxed"
+                data-tr="Seminer, atölye, panel, yaz okulu ve uygulamalı eğitimlerle gençlerin, kamu personelinin ve sivil toplumun yeşil ve dijital becerilerini güçlendirme."
+                data-en="Strengthening green and digital competencies of youth, public staff, and civil society through seminars, workshops, panels, and hands-on trainings."
+              >
+                Seminer, atölye, panel, yaz okulu ve uygulamalı eğitimlerle gençlerin, kamu personelinin ve sivil toplumun yeşil ve dijital becerilerini güçlendirme.
+              </p>
+            </div>
+
+            <div class="p-5 bg-white rounded-xl border border-slate-200/90 shadow-sm">
+              <h3 class="font-bold text-marine text-sm sm:text-base" data-tr="3. Açık Bilgi Platformları ve Ortak Kütüphaneler" data-en="3. Open Knowledge Platforms &amp; Shared Libraries">
+                3. Açık Bilgi Platformları ve Ortak Kütüphaneler
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-mutedSlate mt-1.5 leading-relaxed"
+                data-tr="Politika belgeleri, saha araştırma yayınları ve üyelere/topluma açık dijital ve fiziksel kütüphaneler ile kolektif üretim mekanları oluşturma."
+                data-en="Creating policy briefs, field research publications, open digital/physical libraries, and collective co-working spaces for members and the public."
+              >
+                Politika belgeleri, saha araştırma yayınları ve üyelere/topluma açık dijital ve fiziksel kütüphaneler ile kolektif üretim mekanları oluşturma.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Kurumsal Şeffaflık & Tüzük Özeti -->
+        <div id="kurumsal" class="lg:col-span-6">
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-emeraldEco" data-tr="Yönetişim ve Kurumsal Şeffaflık" data-en="Governance &amp; Institutional Transparency">
+                  Yönetişim ve Kurumsal Şeffaflık
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-glacier text-marine text-xs font-bold" data-tr="5253 Sayılı Kanun" data-en="Law No. 5253">
+                  5253 Sayılı Kanun
+                </span>
+              </div>
+
+              <h2
+                class="text-2xl font-extrabold text-marine mb-3"
+                data-tr="Dernek Tüzüğü ve Yönetişim Yapısı"
+                data-en="Association Bylaws &amp; Governance Structure"
+              >
+                Dernek Tüzüğü ve Yönetişim Yapısı
+              </h2>
+
+              <p
+                class="text-xs sm:text-sm text-mutedSlate leading-relaxed mb-6"
+                data-tr="5253 sayılı Dernekler Kanunu ve 4721 sayılı Türk Medeni Kanunu hükümlerine uygun olarak yürürlükte bulunan dernek tüzüğümüz 27 ana madde ve 1 geçici maddeden oluşmakta olup uluslararası hibe ve denetim standartlarıyla tam uyumludur."
+                data-en="Enacted in accordance with the Law on Associations No. 5253 and the Turkish Civil Code No. 4721, our Bylaws consist of 27 main articles and 1 provisional article, fully aligned with international grant and audit standards."
+              >
+                5253 sayılı Dernekler Kanunu ve 4721 sayılı Türk Medeni Kanunu hükümlerine uygun olarak yürürlükte bulunan dernek tüzüğümüz 27 ana madde ve 1 geçici maddeden oluşmakta olup uluslararası hibe ve denetim standartlarıyla tam uyumludur.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 mb-6 text-xs">
+                <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+                  <span class="block text-mutedSlate font-medium" data-tr="Dernek Organları (Madde 6)" data-en="Governing Bodies (Article 6)">
+                    Dernek Organları (Madde 6)
+                  </span>
+                  <strong class="text-marine mt-1 block text-sm" data-tr="Genel Kurul • Yönetim • Denetim" data-en="General Assembly • Board • Supervisory">
+                    Genel Kurul • Yönetim • Denetim
+                  </strong>
+                  <span class="text-[11px] text-mutedSlate mt-1 block" data-tr="Yönetim: 5 Asıl / 5 Yedek • Denetim: 3 Asıl / 3 Yedek" data-en="Board: 5 Principal / 5 Alternate • Audit: 3 Principal / 3 Alternate">
+                    Yönetim: 5 Asıl / 5 Yedek • Denetim: 3 Asıl / 3 Yedek
+                  </span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+                  <span class="block text-mutedSlate font-medium" data-tr="Olağan Genel Kurul (Madde 7)" data-en="Ordinary General Assembly (Art. 7)">
+                    Olağan Genel Kurul (Madde 7)
+                  </span>
+                  <strong class="text-marine mt-1 block text-sm" data-tr="3 Yılda Bir • Şubat Ayı" data-en="Every 3 Years • February">
+                    3 Yılda Bir • Şubat Ayı
+                  </strong>
+                  <span class="text-[11px] text-mutedSlate mt-1 block" data-tr="Demokratik katılım ve yıllık bağımsız/iç denetim" data-en="Democratic participation &amp; annual internal/external audit">
+                    Demokratik katılım ve yıllık bağımsız/iç denetim
+                  </span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+                  <span class="block text-mutedSlate font-medium" data-tr="Üyelik Türleri (Madde 3)" data-en="Membership Types (Article 3)">
+                    Üyelik Türleri (Madde 3)
+                  </span>
+                  <strong class="text-marine mt-1 block text-sm" data-tr="Asil Üyelik &amp; Fahri Üyelik" data-en="Full &amp; Honorary Membership">
+                    Asil Üyelik &amp; Fahri Üyelik
+                  </strong>
+                  <span class="text-[11px] text-mutedSlate mt-1 block" data-tr="Gerçek ve tüzel kişiler için 30 günde başvuru kararı" data-en="Open to natural &amp; legal persons; 30-day review period">
+                    Gerçek ve tüzel kişiler için 30 günde başvuru kararı
+                  </span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+                  <span class="block text-mutedSlate font-medium" data-tr="Mali Şeffaflık (Madde 13–20)" data-en="Financial Transparency (Art. 13–20)">
+                    Mali Şeffaflık (Madde 13–20)
+                  </span>
+                  <strong class="text-marine mt-1 block text-sm" data-tr="Ulusal &amp; Uluslararası Fon Uyumu" data-en="National &amp; EU Grant Compliance">
+                    Ulusal &amp; Uluslararası Fon Uyumu
+                  </strong>
+                  <span class="text-[11px] text-mutedSlate mt-1 block" data-tr="İç denetim ve bağımsız dış denetime açık yapı" data-en="Open to internal and independent external auditing">
+                    İç denetim ve bağımsız dış denetime açık yapı
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-slate-100">
+              <button
+                type="button"
+                onclick="openModal('bylawsModal')"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-marine text-white text-xs font-semibold hover:bg-emeraldEco transition-colors"
+                data-tr="Tüzük Maddelerini İncele (Md. 1-27)"
+                data-en="Inspect Bylaws Articles (Art. 1-27)"
+              >
+                Tüzük Maddelerini İncele (Md. 1-27)
+              </button>
+              <a
+                href="assets/docs/tuzuk-ozeti-tr.html"
+                data-bylaws-link
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-glacier text-marine border border-marine/15 text-xs font-semibold hover:bg-digitalCyan hover:text-white transition-colors"
+                data-tr="Yazdırılabilir Tüzük Özeti (PDF / HTML) ↗"
+                data-en="Printable Bylaws Summary (PDF / HTML) ↗"
+              >
+                Yazdırılabilir Tüzük Özeti (PDF / HTML) ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim, Ortaklık Formu & Footer -->
+  <footer id="iletisim" class="bg-marine text-white pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 pb-14 border-b border-white/15">
+        <!-- Sol: Kurumsal İletişim Bilgileri -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/logo.svg" alt="MAYEKO Logo" class="w-11 h-11 rounded-xl" />
+            <div>
+              <span class="block font-heading font-bold text-white text-base" data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği" data-en="Blue and Green Ecosystem Development Association">
+                Mavi ve Yeşil Ekosistem Geliştirme Derneği
+              </span>
+              <span class="block text-xs text-digitalCyan font-semibold">MAYEKO / BGEDA • mayeko.org</span>
+            </div>
+          </div>
+
+          <h3
+            class="text-2xl sm:text-3xl font-extrabold leading-snug"
+            data-tr="Daha Dirençli Ekosistemleri Birlikte İnşa Edelim"
+            data-en="Let's Build More Resilient Ecosystems Together"
+          >
+            Daha Dirençli Ekosistemleri Birlikte İnşa Edelim
+          </h3>
+
+          <p
+            class="text-sm text-slate-300 leading-relaxed"
+            data-tr="Mavi, yeşil ve dijital dönüşüm alanlarında AB/ulusal proje ortaklığı, akademik iş birliği, bilgi paylaşımı ve üyelik başvuruları için bizimle iletişime geçebilirsiniz."
+            data-en="Contact us for EU/national project partnerships, academic collaboration, knowledge sharing, and membership inquiries across blue, green, and digital transformation."
+          >
+            Mavi, yeşil ve dijital dönüşüm alanlarında AB/ulusal proje ortaklığı, akademik iş birliği, bilgi paylaşımı ve üyelik başvuruları için bizimle iletişime geçebilirsiniz.
+          </p>
+
+          <div class="space-y-3 text-sm text-slate-200 bg-white/5 p-5 rounded-2xl border border-white/10">
+            <p class="flex items-start gap-3">
+              <span class="text-digitalCyan font-bold shrink-0" data-tr="Merkez:" data-en="Headquarters:">Merkez:</span>
+              <span data-tr="Ortahisar / Trabzon, Türkiye" data-en="Ortahisar / Trabzon, Türkiye">Ortahisar / Trabzon, Türkiye</span>
+            </p>
+            <p class="flex items-start gap-3">
+              <span class="text-digitalCyan font-bold shrink-0" data-tr="Web:" data-en="Website:">Web:</span>
+              <a href="https://mayeko.org" class="underline hover:text-digitalCyan">https://mayeko.org</a>
+            </p>
+            <p class="flex items-start gap-3">
+              <span class="text-digitalCyan font-bold shrink-0" data-tr="E-Posta:" data-en="Email:">E-Posta:</span>
+              <a href="mailto:info@mayeko.org" class="underline hover:text-digitalCyan">info@mayeko.org</a>
+            </p>
+            <p class="flex items-start gap-3">
+              <span class="text-digitalCyan font-bold shrink-0" data-tr="Faaliyet Kapsamı:" data-en="Operational Scope:">Faaliyet Kapsamı:</span>
+              <span data-tr="Yerel, Bölgesel, Ulusal ve Uluslararası (Tüzük Md. 1-2)" data-en="Local, Regional, National &amp; International (Bylaws Art. 1-2)">
+                Yerel, Bölgesel, Ulusal ve Uluslararası (Tüzük Md. 1-2)
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Sağ: Proje Ortaklığı & İletişim Formu -->
+        <div class="lg:col-span-7">
+          <form
+            onsubmit="handleFormSubmit(event)"
+            class="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/15 space-y-4"
+          >
+            <h4
+              class="text-lg font-bold text-white mb-1"
+              data-tr="Proje Ortaklığı, Üyelik ve İletişim Formu"
+              data-en="Project Partnership, Membership &amp; Contact Form"
+            >
+              Proje Ortaklığı, Üyelik ve İletişim Formu
+            </h4>
+            <p
+              class="text-xs text-slate-300 mb-4"
+              data-tr="Formu doldurarak yönetim kurulumuza doğrudan mesaj veya ortaklık çağrısı iletebilirsiniz."
+              data-en="Fill out the form below to send a direct message or partnership proposal to our Board of Directors."
+            >
+              Formu doldurarak yönetim kurulumuza doğrudan mesaj veya ortaklık çağrısı iletebilirsiniz.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-200 mb-1.5" data-tr="Adınız Soyadınız / Kurumunuz *" data-en="Full Name / Organization *">
+                  Adınız Soyadınız / Kurumunuz *
+                </label>
+                <input
+                  type="text"
+                  name="senderName"
+                  required
+                  data-placeholder-tr="Örn: Dr. Ahmet Yılmaz / Karadeniz Üniversitesi"
+                  data-placeholder-en="e.g., Dr. Jane Doe / Black Sea Research Institute"
+                  placeholder="Örn: Dr. Ahmet Yılmaz / Karadeniz Üniversitesi"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-digitalCyan"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-200 mb-1.5" data-tr="E-Posta Adresiniz *" data-en="Email Address *">
+                  E-Posta Adresiniz *
+                </label>
+                <input
+                  type="email"
+                  name="senderEmail"
+                  required
+                  data-placeholder-tr="ornek@kurum.org"
+                  data-placeholder-en="name@organization.org"
+                  placeholder="ornek@kurum.org"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-digitalCyan"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1.5" data-tr="Başvuru / İletişim Konusu *" data-en="Inquiry Topic *">
+                Başvuru / İletişim Konusu *
+              </label>
+              <select
+                name="senderTopic"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-marine border border-white/20 text-sm text-white focus:outline-none focus:border-digitalCyan"
+              >
+                <option value="AB / Uluslararası Proje Ortaklığı (EU / International Grant Partnership)" data-tr="AB / Uluslararası Proje Ortaklığı (Horizon, Erasmus+, Interreg)" data-en="EU / International Grant Partnership (Horizon, Erasmus+, Interreg)">
+                  AB / Uluslararası Proje Ortaklığı (Horizon, Erasmus+, Interreg)
+                </option>
+                <option value="Üniversite / Akademik Araştırma İş Birliği (Academic Collaboration)" data-tr="Üniversite / Akademik Araştırma İş Birliği" data-en="University / Academic Research Collaboration">
+                  Üniversite / Akademik Araştırma İş Birliği
+                </option>
+                <option value="Kamu / Yerel Yönetim / STK Ortaklığı (Public / NGO Partnership)" data-tr="Kamu / Yerel Yönetim / STK Ortaklığı" data-en="Public Authority / Municipality / NGO Partnership">
+                  Kamu / Yerel Yönetim / STK Ortaklığı
+                </option>
+                <option value="Dernek Üyeliği / Gönüllülük Başvurusu (Membership / Volunteering)" data-tr="Dernek Üyeliği / Gönüllülük Başvurusu" data-en="Association Membership / Volunteering Inquiry">
+                  Dernek Üyeliği / Gönüllülük Başvurusu
+                </option>
+                <option value="Tüzük / Kurumsal Bilgi Talebi (Bylaws / General Inquiry)" data-tr="Tüzük / Kurumsal Bilgi Talebi" data-en="Bylaws / General Institutional Inquiry">
+                  Tüzük / Kurumsal Bilgi Talebi
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1.5" data-tr="Mesajınız *" data-en="Your Message *">
+                Mesajınız *
+              </label>
+              <textarea
+                rows="3"
+                name="senderMessage"
+                required
+                data-placeholder-tr="Proje çağrısı, ortaklık önerisi veya üyelik mesajınızı yazınız..."
+                data-placeholder-en="Describe your project call, partnership proposal, or inquiry..."
+                placeholder="Proje çağrısı, ortaklık önerisi veya üyelik mesajınızı yazınız..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-digitalCyan"
+              ></textarea>
+            </div>
+
+            <!-- KVKK Aydınlatma Onay Kutusu -->
+            <div class="pt-1">
+              <label class="flex items-start gap-2.5 text-xs text-slate-300 cursor-pointer">
+                <input
+                  id="kvkkConsent"
+                  type="checkbox"
+                  required
+                  class="mt-0.5 h-4 w-4 rounded border-white/30 accent-digitalCyan shrink-0"
+                />
+                <span>
+                  <button
+                    type="button"
+                    onclick="openModal('kvkkModal')"
+                    class="underline text-digitalCyan hover:text-white font-semibold"
+                    data-tr="KVKK Aydınlatma Metni ve Gizlilik Politikası"
+                    data-en="Data Protection (KVKK/GDPR) &amp; Privacy Notice"
+                  >
+                    KVKK Aydınlatma Metni ve Gizlilik Politikası
+                  </button>
+                  <span
+                    data-tr="'nı okudum; iletişim bilgilerimin başvurumun yanıtlanması amacıyla dernek tarafından işlenmesini kabul ediyorum. *"
+                    data-en=" — I have read and agree to the processing of my contact details by the Association for responding to my inquiry. *"
+                  >
+                    'nı okudum; iletişim bilgilerimin başvurumun yanıtlanması amacıyla dernek tarafından işlenmesini kabul ediyorum. *
+                  </span>
+                </span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-3 rounded-xl bg-digitalCyan text-white font-bold text-sm hover:bg-emeraldEco transition-colors shadow-md"
+              data-tr="Mesajı Gönder"
+              data-en="Send Inquiry"
+            >
+              Mesajı Gönder
+            </button>
+
+            <p id="formFeedback" class="text-xs font-medium hidden"></p>
+            <a
+              id="mailtoFallbackLink"
+              href="mailto:info@mayeko.org"
+              class="hidden inline-block text-xs font-semibold text-digitalCyan underline hover:text-white"
+              data-tr="E-posta uygulamanızda doğrudan açmak için tıklayın (info@mayeko.org) →"
+              data-en="Click here to open directly in your email client (info@mayeko.org) →"
+            >
+              E-posta uygulamanızda doğrudan açmak için tıklayın (info@mayeko.org) →
+            </a>
+          </form>
+        </div>
+      </div>
+
+      <!-- Alt Bilgi (Bottom Bar) -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+        <p>© 2026 Mavi ve Yeşil Ekosistem Geliştirme Derneği (Blue and Green Ecosystem Development Association — MAYEKO / BGEDA).</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <button
+            type="button"
+            onclick="openModal('bylawsModal')"
+            class="hover:text-white transition-colors"
+            data-tr="Dernek Tüzüğü (Md. 1-27)"
+            data-en="Association Bylaws (Art. 1-27)"
+          >
+            Dernek Tüzüğü (Md. 1-27)
+          </button>
+          <span>•</span>
+          <button
+            type="button"
+            onclick="openModal('kvkkModal')"
+            class="hover:text-white transition-colors"
+            data-tr="KVKK &amp; Gizlilik Politikası"
+            data-en="Privacy &amp; Data Protection"
+          >
+            KVKK &amp; Gizlilik Politikası
+          </button>
+          <span>•</span>
+          <a href="https://mayeko.org" class="hover:text-white transition-colors">mayeko.org</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL 1: DERNEK TÜZÜĞÜ ÖZETİ (MADDE 1 - 27)
+       ======================================================================== -->
+  <div
+    id="bylawsModal"
+    class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4"
+    onclick="if (event.target === this) closeModal('bylawsModal')"
+  >
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 bg-marine text-white flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-digitalCyan" data-tr="5253 SAYILI DERNEKLER KANUNU UYARINCA" data-en="UNDER LAW ON ASSOCIATIONS NO. 5253">
+            5253 SAYILI DERNEKLER KANUNU UYARINCA
+          </span>
+          <h3 class="text-lg font-bold" data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği Tüzüğü (Madde 1–27)" data-en="Blue &amp; Green Ecosystem Development Association Bylaws (Art. 1–27)">
+            Mavi ve Yeşil Ekosistem Geliştirme Derneği Tüzüğü (Madde 1–27)
+          </h3>
+        </div>
+        <button
+          type="button"
+          onclick="closeModal('bylawsModal')"
+          class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white font-bold"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-charcoal leading-relaxed">
+        <div class="p-4 rounded-xl bg-glacier/70 border border-slate-200">
+          <strong class="text-marine block mb-1" data-tr="Madde 1 – Derneğin Adı ve Merkezi" data-en="Article 1 – Name and Headquarters">
+            Madde 1 – Derneğin Adı ve Merkezi
+          </strong>
+          <p data-tr="Derneğin adı “Mavi ve Yeşil Ekosistem Geliştirme Derneği”dir. Merkezi Ortahisar / Trabzon’dur. Genel kurul kararıyla yurt içinde ve yurt dışında şube ve temsilcilik açabilir." data-en="The name of the Association is 'Blue and Green Ecosystem Development Association' (Mavi ve Yeşil Ekosistem Geliştirme Derneği). Its headquarters are in Ortahisar / Trabzon, Türkiye. It may open branches and representative offices domestically and abroad.">
+            Derneğin adı “Mavi ve Yeşil Ekosistem Geliştirme Derneği”dir. Merkezi Ortahisar / Trabzon’dur. Genel kurul kararıyla yurt içinde ve yurt dışında şube ve temsilcilik açabilir.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+          <strong class="text-marine block mb-1" data-tr="Madde 2 – Derneğin Amacı, Çalışma Konuları ve Faaliyet Alanı" data-en="Article 2 – Purpose, Activities, and Field of Operation">
+            Madde 2 – Derneğin Amacı, Çalışma Konuları ve Faaliyet Alanı
+          </strong>
+          <p data-tr="Toplumun sosyal, kültürel ve iktisadi yaşamına ve yaşadığı çevreye pozitif katkı sağlamak amacıyla mavi ekonomi, yeşil dönüşüm (iklim eylemi, döngüsel ekonomi, endüstriyel simbiyoz, yenilenebilir enerji, afet yönetimi) ve dijital dönüşüm (AR/VR, blokzincir, e-oyun, e-ticaret, geleceğin meslekleri) alanlarında araştırma, eğitim, proje finansmanı ve açık bilgi platformları yürütür." data-en="Conducts research, training, grant projects, and open knowledge platforms across blue economy, green transition (climate action, circular economy, industrial symbiosis, renewable energy, disaster management), and digital transformation (AR/VR, blockchain, e-gaming, e-commerce, future skills).">
+            Toplumun sosyal, kültürel ve iktisadi yaşamına ve yaşadığı çevreye pozitif katkı sağlamak amacıyla mavi ekonomi, yeşil dönüşüm (iklim eylemi, döngüsel ekonomi, endüstriyel simbiyoz, yenilenebilir enerji, afet yönetimi) ve dijital dönüşüm (AR/VR, blokzincir, e-oyun, e-ticaret, geleceğin meslekleri) alanlarında araştırma, eğitim, proje finansmanı ve açık bilgi platformları yürütür.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+          <strong class="text-marine block mb-1" data-tr="Madde 3–5 – Üyelik Koşulları, Üyelikten Çıkma ve Çıkarılma" data-en="Articles 3–5 – Membership Rights, Resignation, and Termination">
+            Madde 3–5 – Üyelik Koşulları, Üyelikten Çıkma ve Çıkarılma
+          </strong>
+          <p data-tr="Fiil ehliyetine sahip ve dernek amaçlarını benimseyen her gerçek ve tüzel kişi üye olabilir. Başvurular Yönetim Kurulunca 30 gün içinde karara bağlanır. Derneğe önemli katkı sunanlara Fahri Üyelik verilebilir." data-en="Any natural or legal person with legal capacity embracing the Association's mission may apply. Applications are resolved by the Board within 30 days. Honorary Membership may be granted to distinguished contributors.">
+            Fiil ehliyetine sahip ve dernek amaçlarını benimseyen her gerçek ve tüzel kişi üye olabilir. Başvurular Yönetim Kurulunca 30 gün içinde karara bağlanır. Derneğe önemli katkı sunanlara Fahri Üyelik verilebilir.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+          <strong class="text-marine block mb-1" data-tr="Madde 6–12 – Dernek Organları (Genel Kurul, Yönetim ve Denetim Kurulu)" data-en="Articles 6–12 – Governing Bodies (General Assembly, Board, Supervisory Board)">
+            Madde 6–12 – Dernek Organları (Genel Kurul, Yönetim ve Denetim Kurulu)
+          </strong>
+          <p data-tr="Zorunlu organlar Genel Kurul, Yönetim Kurulu (5 asıl, 5 yedek) ve Denetim Kurulu’dur (3 asıl, 3 yedek). Olağan Genel Kurul 3 yılda bir Şubat ayında toplanır." data-en="Mandatory organs are the General Assembly, Board of Directors (5 principal, 5 alternate), and Supervisory Board (3 principal, 3 alternate). Ordinary General Assembly convenes every 3 years in February.">
+            Zorunlu organlar Genel Kurul, Yönetim Kurulu (5 asıl, 5 yedek) ve Denetim Kurulu’dur (3 asıl, 3 yedek). Olağan Genel Kurul 3 yılda bir Şubat ayında toplanır.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-offWhite border border-slate-200">
+          <strong class="text-marine block mb-1" data-tr="Madde 13–27 – Mali Hükümler, İç Denetim, Şubeler ve Fesih" data-en="Articles 13–27 – Financial Provisions, Internal Audit, Branches, and Dissolution">
+            Madde 13–27 – Mali Hükümler, İç Denetim, Şubeler ve Fesih
+          </strong>
+          <p data-tr="Dernek gelirleri; üye aidatları, ulusal/uluslararası hibe ve proje fonları, bağışlar ve iktisadi işletme gelirlerinden oluşur. Denetim Kurulu en geç yılda bir iç denetim yapar; ayrıca bağımsız dış denetim kuruluşlarına denetim yaptırılabilir." data-en="Revenues consist of membership fees, national/international project grants, donations, and economic enterprise income. Audited at least annually by the Supervisory Board and open to independent external audit.">
+            Dernek gelirleri; üye aidatları, ulusal/uluslararası hibe ve proje fonları, bağışlar ve iktisadi işletme gelirlerinden oluşur. Denetim Kurulu en geç yılda bir iç denetim yapar; ayrıca bağımsız dış denetim kuruluşlarına denetim yaptırılabilir.
+          </p>
+        </div>
+      </div>
+
+      <div class="px-6 py-4 bg-offWhite border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+        <a
+          href="assets/docs/tuzuk-ozeti-tr.html"
+          data-bylaws-link
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emeraldEco text-white text-xs font-semibold hover:bg-marine transition-colors"
+          data-tr="Tam Özeti Yeni Sekmede Aç / PDF Yazdır ↗"
+          data-en="Open Full Summary in New Tab / Print PDF ↗"
+        >
+          Tam Özeti Yeni Sekmede Aç / PDF Yazdır ↗
+        </a>
+        <button
+          type="button"
+          onclick="closeModal('bylawsModal')"
+          class="px-4 py-2 rounded-lg border border-slate-300 text-xs font-semibold text-charcoal hover:bg-slate-100"
+          data-tr="Kapat"
+          data-en="Close"
+        >
+          Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: KVKK AYDINLATMA METNİ VE GİZLİLİK POLİTİKASI
+       ======================================================================== -->
+  <div
+    id="kvkkModal"
+    class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4"
+    onclick="if (event.target === this) closeModal('kvkkModal')"
+  >
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 bg-marine text-white flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-digitalCyan" data-tr="6698 SAYILI KVKK &amp; GDPR UYUMU" data-en="KVKK NO. 6698 &amp; GDPR COMPLIANCE">
+            6698 SAYILI KVKK &amp; GDPR UYUMU
+          </span>
+          <h3 class="text-lg font-bold" data-tr="KVKK Aydınlatma Metni ve Gizlilik Politikası" data-en="Data Protection &amp; Privacy Policy">
+            KVKK Aydınlatma Metni ve Gizlilik Politikası
+          </h3>
+        </div>
+        <button
+          type="button"
+          onclick="closeModal('kvkkModal')"
+          class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white font-bold"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-charcoal leading-relaxed">
+        <p
+          data-tr="1. Veri Sorumlusu: 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca veri sorumlusu, merkezi Ortahisar / Trabzon adresinde bulunan Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA - info@mayeko.org)’dir."
+          data-en="1. Data Controller: Under the Personal Data Protection Law No. 6698 (KVKK) and GDPR principles, the data controller is the Blue and Green Ecosystem Development Association (BGEDA / MAYEKO - info@mayeko.org), headquartered in Ortahisar / Trabzon, Türkiye."
+        >
+          1. Veri Sorumlusu: 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca veri sorumlusu, merkezi Ortahisar / Trabzon adresinde bulunan Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA - info@mayeko.org)’dir.
+        </p>
+        <p
+          data-tr="2. İşlenen Kişisel Veriler ve Amaç: İletişim ve ortaklık formu aracılığıyla paylaştığınız Ad Soyad, Kurum, E-posta adresi ve mesaj içeriğiniz; yalnızca proje ortaklığı, üyelik veya bilgi talebinizin değerlendirilmesi ve yanıtlanması amacıyla (KVKK m.5/2-c ve m.5/2-f) işlenir."
+          data-en="2. Processed Data &amp; Purpose: Your Name, Organization, Email address, and message submitted via the contact form are processed solely to evaluate and respond to your partnership, membership, or institutional inquiry."
+        >
+          2. İşlenen Kişisel Veriler ve Amaç: İletişim ve ortaklık formu aracılığıyla paylaştığınız Ad Soyad, Kurum, E-posta adresi ve mesaj içeriğiniz; yalnızca proje ortaklığı, üyelik veya bilgi talebinizin değerlendirilmesi ve yanıtlanması amacıyla (KVKK m.5/2-c ve m.5/2-f) işlenir.
+        </p>
+        <p
+          data-tr="3. Çerezler ve Üçüncü Taraf Takip: mayeko.org web sitesinde reklam, davranışsal profilleme veya üçüncü taraf analitik/takip çerezi kullanılmamaktadır. Yalnızca dil tercihinizi (TR/EN) hatırlamak için tarayıcınızın yerel belleğinde (localStorage) teknik tercih kaydı tutulur."
+          data-en="3. Cookies &amp; Third-Party Tracking: mayeko.org does not use advertising, behavioral profiling, or third-party tracking cookies. Only a technical localStorage key is used to remember your language preference (TR/EN)."
+        >
+          3. Çerezler ve Üçüncü Taraf Takip: mayeko.org web sitesinde reklam, davranışsal profilleme veya üçüncü taraf analitik/takip çerezi kullanılmamaktadır. Yalnızca dil tercihinizi (TR/EN) hatırlamak için tarayıcınızın yerel belleğinde (localStorage) teknik tercih kaydı tutulur.
+        </p>
+        <p
+          data-tr="4. İlgili Kişi Hakları (KVKK m.11): Kişisel verilerinize ilişkin bilgi talep etme, düzeltme ve silme haklarınızı info@mayeko.org adresine yazılı olarak iletebilirsiniz."
+          data-en="4. Your Rights (KVKK Art. 11 / GDPR): You may exercise your rights to access, rectify, or erase your personal data at any time by contacting info@mayeko.org."
+        >
+          4. İlgili Kişi Hakları (KVKK m.11): Kişisel verilerinize ilişkin bilgi talep etme, düzeltme ve silme haklarınızı info@mayeko.org adresine yazılı olarak iletebilirsiniz.
+        </p>
+      </div>
+
+      <div class="px-6 py-4 bg-offWhite border-t border-slate-200 flex justify-end">
+        <button
+          type="button"
+          onclick="closeModal('kvkkModal')"
+          class="px-5 py-2 rounded-lg bg-marine text-white text-xs font-semibold hover:bg-emeraldEco transition-colors"
+          data-tr="Anladım ve Kapat"
+          data-en="Understood &amp; Close"
+        >
+          Anladım ve Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ana Etkileşim ve TR/EN Dil Motoru -->
+  <script src="js/main.js"></script>
+</body>
+</html>
