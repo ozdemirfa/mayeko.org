@@ -35,6 +35,9 @@ async function verifyTurnstile(token, secret, ip) {
 
 export default {
   async fetch(request, env) {
+    if (new URL(request.url).pathname !== '/api/contact') {
+      return new Response('Not found', { status: 404 });
+    }
     if (request.method !== 'POST') {
       return json({ ok: false, error: 'method' }, 405);
     }

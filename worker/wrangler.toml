@@ -6,7 +6,10 @@ workers_dev = false
 
 routes = [
   { pattern = "mayeko.org/api/contact", zone_name = "mayeko.org" },
-  { pattern = "www.mayeko.org/api/contact", zone_name = "mayeko.org" }
+  { pattern = "www.mayeko.org/api/contact", zone_name = "mayeko.org" },
+  # Pages, repo kökündeki worker/ kaynaklarını da yayınlıyor; bu yolları 404 ile kapat
+  { pattern = "mayeko.org/worker/*", zone_name = "mayeko.org" },
+  { pattern = "www.mayeko.org/worker/*", zone_name = "mayeko.org" }
 ]
 
 # Hedef, Email Routing'de doğrulanmış adres olmalı (info@mayeko.org buraya yönlendiriliyor).
