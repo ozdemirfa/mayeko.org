@@ -1,0 +1,21 @@
+name = "mayeko-contact"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+
+routes = [
+  { pattern = "mayeko.org/api/contact", zone_name = "mayeko.org" },
+  { pattern = "www.mayeko.org/api/contact", zone_name = "mayeko.org" }
+]
+
+# Hedef, Email Routing'de doğrulanmış adres olmalı (info@mayeko.org buraya yönlendiriliyor).
+[[send_email]]
+name = "CONTACT_EMAIL"
+destination_address = "fseem53@gmail.com"
+
+[vars]
+FROM_ADDRESS = "form@mayeko.org"
+TO_ADDRESS = "fseem53@gmail.com"
+ALLOWED_ORIGINS = "https://mayeko.org,https://www.mayeko.org"
+# Gizli: TURNSTILE_SECRET  →  npx wrangler secret put TURNSTILE_SECRET

@@ -1,0 +1,4 @@
+# Lokal geliştirme için: bu dosyayı .dev.vars olarak kopyalayın.
+# Cloudflare'in her zaman geçen test anahtarı:
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+ALLOWED_ORIGINS=https://mayeko.org,https://www.mayeko.org,http://localhost:8080

@@ -94,11 +94,14 @@ function initReveal() {
   });
 }
 
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const feedback = document.getElementById('formFeedback');
   const kvkkCheck = document.getElementById('kvkkConsent');
+  const submitBtn = document.getElementById('formSubmit');
+  const btnLabel = submitBtn?.querySelector('[data-tr]');
+  const tr = currentLang === 'tr';
 
   const show = (ok, msg) => {
     if (!feedback) return;
@@ -108,40 +111,79 @@ function handleFormSubmit(e) {
   };
 
   if (kvkkCheck && !kvkkCheck.checked) {
-    show(
-      false,
-      currentLang === 'tr'
-        ? 'Lütfen göndermeden önce KVKK Aydınlatma Metni onay kutusunu işaretleyin.'
-        : 'Please tick the privacy notice consent box before sending.'
-    );
+    show(false, tr
+      ? 'Lütfen göndermeden önce KVKK Aydınlatma Metni onay kutusunu işaretleyin.'
+      : 'Please tick the privacy notice consent box before sending.');
     return;
   }
 
   const val = (n) => (form.elements.namedItem(n)?.value || '').trim();
-  const name = val('senderName');
-  const email = val('senderEmail');
-  const topic = val('senderTopic');
-  const message = val('senderMessage');
-
-  const subject = encodeURIComponent(`[mayeko.org] ${topic || 'İletişim'} — ${name}`);
-  const body = encodeURIComponent(`Ad Soyad / Kurum: ${name}\nE-posta: ${email}\nKonu: ${topic}\n\nMesaj:\n${message}`);
-  const href = `mailto:info@mayeko.org?subject=${subject}&body=${body}`;
-
-  const mailtoLink = document.getElementById('mailtoFallbackLink');
-  if (mailtoLink) {
-    mailtoLink.setAttribute('href', href);
-    mailtoLink.classList.remove('hidden');
+  const turnstileToken = val('cf-turnstile-response');
+  if (!turnstileToken) {
+    show(false, tr
+      ? 'Lütfen güvenlik doğrulamasının tamamlanmasını bekleyin.'
+      : 'Please wait for the security check to complete.');
+    return;
   }
 
-  show(
-    true,
-    currentLang === 'tr'
-      ? `Teşekkürler${name ? ' ' + name : ''}! E-posta uygulamanız mesajınızla açılıyor. Açılmazsa aşağıdaki bağlantıyı kullanın.`
-      : `Thank you${name ? ' ' + name : ''}! Your email app is opening with your message. If it doesn't, use the link below.`
-  );
+  const resetTurnstile = () => {
+    try { window.turnstile?.reset(); } catch { /* yoksay */ }
+  };
+  const setBusy = (busy) => {
+    if (!submitBtn) return;
+    submitBtn.disabled = busy;
+    if (btnLabel) {
+      btnLabel.textContent = busy
+        ? (tr ? 'Gönderiliyor…' : 'Sending…')
+        : btnLabel.getAttribute(`data-${currentLang}`);
+    }
+  };
 
-  window.location.href = href;
-  form.reset();
+  const name = val('senderName');
+  setBusy(true);
+  feedback?.classList.add('hidden');
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email: val('senderEmail'),
+        topic: val('senderTopic'),
+        message: val('senderMessage'),
+        consent: !!kvkkCheck?.checked,
+        website: val('website'),
+        turnstileToken,
+        lang: currentLang,
+      }),
+    });
+    const data = await res.json().catch(() => ({}));
+
+    if (res.ok && data.ok) {
+      show(true, tr
+        ? `Teşekkürler${name ? ' ' + name : ''}! Mesajınız bize ulaştı; en kısa sürede dönüş yapacağız.`
+        : `Thank you${name ? ' ' + name : ''}! Your message has reached us; we will get back to you soon.`);
+      form.reset();
+    } else if (data.error === 'captcha') {
+      show(false, tr
+        ? 'Güvenlik doğrulaması başarısız oldu. Lütfen tekrar deneyin.'
+        : 'Security check failed. Please try again.');
+    } else if (data.error === 'validation') {
+      show(false, tr
+        ? 'Lütfen tüm zorunlu alanları geçerli şekilde doldurun.'
+        : 'Please fill in all required fields correctly.');
+    } else {
+      throw new Error(data.error || res.status);
+    }
+  } catch {
+    show(false, tr
+      ? 'Mesajınız şu anda gönderilemedi. Lütfen daha sonra tekrar deneyin veya info@mayeko.org adresine yazın.'
+      : 'Your message could not be sent right now. Please try again later or write to info@mayeko.org.');
+  } finally {
+    setBusy(false);
+    resetTurnstile();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

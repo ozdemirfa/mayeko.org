@@ -25,7 +25,7 @@
       <span class="leading-tight">
         <span class="block font-heading font-extrabold text-[1.05rem] tracking-tight ${light ? 'text-white' : 'text-marine'}">MAYEKO</span>
         <span class="block text-[0.72rem] font-medium ${light ? 'text-slate-300' : 'text-mutedSlate'}"
-          data-tr="Mavi ve Yeşil Ekosistem Derneği" data-en="Blue &amp; Green Ecosystem Assoc.">Mavi ve Yeşil Ekosistem Derneği</span>
+          data-tr="Mavi ve Yeşil Ekosistemi Geliştirme Derneği" data-en="Mavi ve Yeşil Ekosistemi Geliştirme Derneği">Mavi ve Yeşil Ekosistemi Geliştirme Derneği</span>
       </span>
     </a>`;
 
@@ -97,7 +97,7 @@
       </div>
 
       <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4 justify-between text-xs text-slate-400">
-        <p>© ${year} <span data-tr="Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)" data-en="Blue and Green Ecosystem Development Association (BGEDA / MAYEKO)">Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)</span></p>
+        <p>© ${year} <span data-tr="Mavi ve Yeşil Ekosistemi Geliştirme Derneği (MAYEKO)" data-en="Mavi ve Yeşil Ekosistemi Geliştirme Derneği (MAYEKO)">Mavi ve Yeşil Ekosistemi Geliştirme Derneği (MAYEKO)</span></p>
         <div class="flex gap-5">
           <a href="/kurumsal#tuzuk" data-tr="Dernek Tüzüğü" data-en="Bylaws">Dernek Tüzüğü</a>
           <a href="/gizlilik" data-tr="KVKK &amp; Gizlilik" data-en="Privacy">KVKK &amp; Gizlilik</a>

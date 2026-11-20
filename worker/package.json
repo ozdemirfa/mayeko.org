@@ -1,0 +1,15 @@
+{
+  "name": "mayeko-contact",
+  "private": true,
+  "description": "mayeko.org iletişim formu — talepleri Cloudflare Email Routing ile e-posta olarak iletir",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "mimetext": "^3.0.27"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

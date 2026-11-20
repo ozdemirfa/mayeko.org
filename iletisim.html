@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr" class="no-js"
   data-title-tr="İletişim | MAYEKO"
-  data-title-en="Contact | BGEDA"
+  data-title-en="Contact | MAYEKO"
   data-desc-tr="Proje ortaklığı, akademik iş birliği ve üyelik için MAYEKO ile iletişime geçin."
-  data-desc-en="Contact BGEDA about project partnerships, academic collaboration and membership.">
+  data-desc-en="Contact MAYEKO about project partnerships, academic collaboration and membership.">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,6 +85,11 @@
             </div>
           </div>
 
+          <div class="hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
           <div class="field">
             <label for="senderTopic" data-tr="Konu *" data-en="Topic *">Konu *</label>
             <select id="senderTopic" name="senderTopic">
@@ -114,12 +119,12 @@
             </span>
           </label>
 
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAGJ3U5xhqAgBbID3" data-language="auto"></div>
+
           <div class="flex flex-wrap items-center gap-5 pt-2">
-            <button type="submit" class="btn btn-primary"><span data-tr="Mesajı gönder" data-en="Send message">Mesajı gönder</span><span class="arrow">→</span></button>
+            <button id="formSubmit" type="submit" class="btn btn-primary disabled:opacity-60 disabled:cursor-wait"><span data-tr="Mesajı gönder" data-en="Send message">Mesajı gönder</span><span class="arrow">→</span></button>
             <p id="formFeedback" class="text-sm font-medium hidden" role="status"></p>
           </div>
-          <a id="mailtoFallbackLink" href="mailto:info@mayeko.org" class="hidden text-sm font-semibold text-digitalCyan underline"
-             data-tr="E-posta uygulamanızda açmak için tıklayın →" data-en="Click to open in your email app →">E-posta uygulamanızda açmak için tıklayın →</a>
         </form>
       </div>
     </section>
@@ -128,5 +133,6 @@
   <div id="site-footer"></div>
   <script src="/js/layout.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>

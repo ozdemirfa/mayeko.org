@@ -1,7 +1,7 @@
-# Mavi ve Yeşil Ekosistem Geliştirme Derneği (MAYEKO / BGEDA)
+# Mavi ve Yeşil Ekosistemi Geliştirme Derneği (MAYEKO)
 ## `mayeko.org` Kurumsal Kimlik, Web Sitesi Tasarım Planı ve Geliştirme Dokümanı
 
-Bu doküman, **Mavi ve Yeşil Ekosistem Geliştirme Derneği (Blue and Green Ecosystem Development Association — MAYEKO / BGEDA)** tüzüğü (Madde 1–27) ve tanıtım sunumu esas alınarak **`mayeko.org`** alan adı için geliştirilen kurumsal, iki dilli (`TR / EN`), erişilebilir ve uluslararası fon programlarına (Horizon Europe, Erasmus+, Interreg NEXT Karadeniz Havzası, Kalkınma Ajansları vb.) güven veren web sitesinin mimarisini tanımlar.
+Bu doküman, **Mavi ve Yeşil Ekosistemi Geliştirme Derneği (MAYEKO)** tüzüğü (Madde 1–27) ve tanıtım sunumu esas alınarak **`mayeko.org`** alan adı için geliştirilen kurumsal, iki dilli (`TR / EN`), erişilebilir ve uluslararası fon programlarına (Horizon Europe, Erasmus+, Interreg NEXT Karadeniz Havzası, Kalkınma Ajansları vb.) güven veren web sitesinin mimarisini tanımlar.
 
 ---
 
