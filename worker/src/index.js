@@ -1,6 +1,5 @@
-// mayeko.org iletişim formu → Cloudflare Email Routing (send_email) ile e-posta
-import { EmailMessage } from 'cloudflare:email';
-import { createMimeMessage, Mailbox } from 'mimetext';
+// mayeko.org iletişim formu → Hostinger SMTP ile e-posta
+import { WorkerMailer } from 'worker-mailer';
 
 const TOPICS = new Set([
   'AB / Uluslararası Proje Ortaklığı',
@@ -84,30 +83,39 @@ export default {
     const country = request.cf?.country || '-';
     const date = new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' });
 
-    const msg = createMimeMessage();
-    msg.setSender({ name: 'MAYEKO İletişim Formu', addr: env.FROM_ADDRESS });
-    msg.setRecipient(env.TO_ADDRESS);
-    msg.setHeader('Reply-To', new Mailbox({ name: name.replace(/["<>]/g, ''), addr: email }));
-    msg.setSubject(`[mayeko.org] ${topic} — ${name}`);
-    msg.addMessage({
-      contentType: 'text/plain',
-      encoding: '8bit',
-      data:
-        `Ad Soyad / Kurum: ${name}\n` +
-        `E-posta: ${email}\n` +
-        `Konu: ${topic}\n` +
-        `Dil: ${lang.toUpperCase()}\n` +
-        `Tarih: ${date}\n` +
-        `IP / Ülke: ${ip || '-'} / ${country}\n` +
-        `KVKK onayı: Evet\n\n` +
-        `Mesaj:\n${message}\n\n` +
-        `— Bu e-posta mayeko.org/iletisim formundan gönderildi. Yanıtla dediğinizde gönderene gider.`,
-    });
+    const body =
+      `Ad Soyad / Kurum: ${name}\n` +
+      `E-posta: ${email}\n` +
+      `Konu: ${topic}\n` +
+      `Dil: ${lang.toUpperCase()}\n` +
+      `Tarih: ${date}\n` +
+      `IP / Ülke: ${ip || '-'} / ${country}\n` +
+      `KVKK onayı: Evet\n\n` +
+      `Mesaj:\n${message}\n\n` +
+      `— Bu e-posta mayeko.org/iletisim formundan gönderildi. Yanıtla dediğinizde gönderene gider.`;
 
     try {
-      await env.CONTACT_EMAIL.send(new EmailMessage(env.FROM_ADDRESS, env.TO_ADDRESS, msg.asRaw()));
+      await WorkerMailer.send(
+        {
+          host: env.SMTP_HOST,
+          port: Number(env.SMTP_PORT) || 465,
+          secure: true,
+          credentials: { username: env.FROM_ADDRESS, password: env.SMTP_PASSWORD },
+          authType: ['plain', 'login'],
+          name: 'mayeko.org',
+          socketTimeoutMs: 15000,
+          responseTimeoutMs: 15000,
+        },
+        {
+          from: { name: 'MAYEKO İletişim Formu', email: env.FROM_ADDRESS },
+          to: env.TO_ADDRESS,
+          reply: { name: name.replace(/["<>]/g, ''), email },
+          subject: `[mayeko.org] ${topic} — ${name}`,
+          text: body,
+        },
+      );
     } catch (err) {
-      console.error('send_email failed', err);
+      console.error('smtp send failed', err?.message || err);
       return json({ ok: false, error: 'send' }, 502);
     }
 

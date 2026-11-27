@@ -12,13 +12,12 @@ routes = [
   { pattern = "www.mayeko.org/worker/*", zone_name = "mayeko.org" }
 ]
 
-# Hedef, Email Routing'de doğrulanmış adres olmalı (info@mayeko.org buraya yönlendiriliyor).
-[[send_email]]
-name = "CONTACT_EMAIL"
-destination_address = "fseem53@gmail.com"
-
+# Mail, Hostinger SMTP üzerinden gönderilir (Cloudflare Email Routing kapalı; MX Hostinger'da).
 [vars]
-FROM_ADDRESS = "form@mayeko.org"
-TO_ADDRESS = "fseem53@gmail.com"
+SMTP_HOST = "smtp.hostinger.com"
+SMTP_PORT = "465"
+FROM_ADDRESS = "info@mayeko.org"
+TO_ADDRESS = "info@mayeko.org"
 ALLOWED_ORIGINS = "https://mayeko.org,https://www.mayeko.org"
 # Gizli: TURNSTILE_SECRET  →  npx wrangler secret put TURNSTILE_SECRET
+# Gizli: SMTP_PASSWORD     →  npx wrangler secret put SMTP_PASSWORD  (FROM_ADDRESS kutusunun şifresi)
