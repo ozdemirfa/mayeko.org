@@ -1,15 +1,12 @@
 {
   "name": "mayeko-contact",
   "private": true,
-  "description": "mayeko.org iletişim formu — talepleri Hostinger SMTP ile e-posta olarak iletir",
+  "description": "mayeko.org iletişim formu — talepleri Cloudflare Email Sending ile e-posta olarak iletir",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
-  },
-  "dependencies": {
-    "worker-mailer": "1.3.1"
   }
 }

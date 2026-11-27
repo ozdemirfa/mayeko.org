@@ -1,5 +1,4 @@
-// mayeko.org iletişim formu → Hostinger SMTP ile e-posta
-import { WorkerMailer } from 'worker-mailer';
+// mayeko.org iletişim formu → Cloudflare Email Sending (send_email binding) ile e-posta
 
 const TOPICS = new Set([
   'AB / Uluslararası Proje Ortaklığı',
@@ -95,27 +94,15 @@ export default {
       `— Bu e-posta mayeko.org/iletisim formundan gönderildi. Yanıtla dediğinizde gönderene gider.`;
 
     try {
-      await WorkerMailer.send(
-        {
-          host: env.SMTP_HOST,
-          port: Number(env.SMTP_PORT) || 465,
-          secure: true,
-          credentials: { username: env.FROM_ADDRESS, password: env.SMTP_PASSWORD },
-          authType: ['plain', 'login'],
-          name: 'mayeko.org',
-          socketTimeoutMs: 15000,
-          responseTimeoutMs: 15000,
-        },
-        {
-          from: { name: 'MAYEKO İletişim Formu', email: env.FROM_ADDRESS },
-          to: env.TO_ADDRESS,
-          reply: { name: name.replace(/["<>]/g, ''), email },
-          subject: `[mayeko.org] ${topic} — ${name}`,
-          text: body,
-        },
-      );
+      await env.EMAIL.send({
+        from: { name: 'MAYEKO İletişim Formu', email: env.FROM_ADDRESS },
+        to: env.TO_ADDRESS,
+        replyTo: { name: name.replace(/["<>]/g, '') || email, email },
+        subject: `[mayeko.org] ${topic} — ${name}`,
+        text: body,
+      });
     } catch (err) {
-      console.error('smtp send failed', err?.message || err);
+      console.error('email send failed', err?.code || '', err?.message || err);
       return json({ ok: false, error: 'send' }, 502);
     }
 
