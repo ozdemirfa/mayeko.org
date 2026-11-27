@@ -1,0 +1,63 @@
+# main'e push → test → iletişim Worker'ı (mayeko-contact) → Cloudflare Pages (mayeko-org) → canlı duman testi.
+# Pages'in kendi GitHub build'leri kapalıdır; yayın yalnız bu workflow'dan yapılır.
+name: deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-mayeko-org
+  cancel-in-progress: false
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - name: Worker kurulumu
+        working-directory: worker
+        run: npm ci
+      - name: İletişim Worker'ı yayını
+        working-directory: worker
+        run: npx wrangler deploy
+      - name: Yayın paketi
+        run: scripts/build-dist.sh
+      - name: Pages yayını
+        working-directory: worker
+        run: >
+          npx wrangler pages deploy ../dist
+          --project-name mayeko-org
+          --branch main
+          --commit-hash "$GITHUB_SHA"
+          --commit-message "$(git log -1 --format=%s)"
+          --commit-dirty=false
+      - name: Canlı duman testi
+        run: |
+          v=$(git rev-parse --short HEAD)
+          for p in / /hakkimizda /alanlar /metodoloji /isbirligi /kurumsal /iletisim /gizlilik; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://mayeko.org$p")
+            echo "$p $code"; [ "$code" = 200 ] || exit 1
+          done
+          for i in $(seq 1 12); do
+            curl -s "https://mayeko.org/?cb=$RANDOM" | grep -q "?v=$v" && { echo "Canlıda sürüm $v"; exit 0; }
+            sleep 5
+          done
+          echo "::error::Canlı sitede sürüm $v görünmüyor"; exit 1

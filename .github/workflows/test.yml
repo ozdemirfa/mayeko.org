@@ -1,0 +1,36 @@
+# Ortak test işi: ci.yml ve deploy.yml tarafından çağrılır.
+name: test
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            worker/package-lock.json
+      - run: npm ci
+      - name: Tailwind derlemesi güncel mi
+        run: |
+          npm run build
+          git diff --exit-code css/tailwind.css || {
+            echo "::error::css/tailwind.css güncel değil. Yerelde 'npm run build' çalıştırıp commit'le."; exit 1; }
+      - name: Yayın paketi ve bağlantı kontrolü
+        run: |
+          scripts/build-dist.sh
+          node scripts/check-site.mjs dist
+      - name: Worker derleme kontrolü
+        working-directory: worker
+        run: |
+          npm ci
+          npx wrangler deploy --dry-run --outdir /tmp/worker-dry
